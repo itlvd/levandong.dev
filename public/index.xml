@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Dong&#39;s Notes</title>
+        <link>http://localhost:1313/</link>
+        <description>Chia sẻ kiến thức</description>
+        <generator>Hugo -- gohugo.io</generator><language>vi</language><managingEditor>itlvd@outlook.com (Lê Văn Đông)</managingEditor>
+            <webMaster>itlvd@outlook.com (Lê Văn Đông)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 14 Jan 2024 07:07:07 &#43;0100</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>My First Post</title>
+    <link>http://localhost:1313/my-first-post/</link>
+    <pubDate>Sun, 14 Jan 2024 07:07:07 &#43;0100</pubDate><author>itlvd@outlook.com (Lê Văn Đông)</author><guid>http://localhost:1313/my-first-post/</guid>
+    <description><![CDATA[Introduction This is bold text, and this is emphasized text.
+Visit the Hugo website!]]></description>
+</item>
+</channel>
+</rss>
