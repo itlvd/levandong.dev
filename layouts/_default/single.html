@@ -101,7 +101,7 @@
     {{- end }}
   </footer>
 
-  {{- if (.Param "comments") }}
+  {{- if (and (.Param "comments") (not $exclude)) }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
