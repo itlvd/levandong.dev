@@ -1,0 +1,109 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">
+      {{ .Title }}
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+
+    <!-- Add mermaid min js file -->
+    {{ if (.Params.mermaid) }}
+    {{ partial "mermaid.html" }}
+    {{ end }}
+
+<!-- Custom logic: add links to recent posts starts -->
+{{- $current := . }}
+{{- $excludeUrls := site.Params.noRecentPosts }}
+{{- $exclude := false }}
+
+{{- range $excludeUrls }}
+  {{- if strings.HasPrefix $current.RelPermalink . }}
+    {{- $exclude = true }}
+  {{- end }}
+{{- end }}
+
+{{- if not $exclude }}
+  <div align="center">
+    ~~~
+  </div>
+  <h2>Recent posts</h2>
+  <ul>
+    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections | first 11 }}
+    {{- $.Scratch.Set "count" 0 }}
+
+    {{- range $pages }}
+      {{- $page := . }} <!-- Save the current page context -->
+      {{- $pageExclude := false }}
+
+      {{- range $excludeUrls }}
+        {{- if strings.HasPrefix $page.RelPermalink . }} <!-- Use $page to ensure proper context -->
+          {{- $pageExclude = true }}
+        {{- end }}
+      {{- end }}
+
+      {{- if not $pageExclude }}
+        {{- if lt ($.Scratch.Get "count") 10 }}
+          {{- if ne $page $current }}
+            <li><a href="{{ $page.Permalink }}">{{ $page.LinkTitle }}</a></li>
+            {{- $.Scratch.Add "count" 1 }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+
+    {{- end }}
+  </ul>
+{{- end }}
+<!-- Custom logic: add links to recent posts ends -->
+</div>
+
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}

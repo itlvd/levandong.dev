@@ -1,0 +1,202 @@
+baseURL: "https://levandong.dev/"
+title: Dong's Notes
+theme: PaperMod
+# defaultContentLanguage: "vi"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableInlineShortcodes: true
+
+permalinks:
+  posts: /:contentbasename/
+
+pagination:
+  pagerSize: 7
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Dong's Notes
+  description: "Dong's Notes"
+  keywords: [Blog, Lê Văn Đông, Go, Golang, Developer, Backend Developer, API, Database, Software Engineering]
+  author: "Lê Văn Đông"
+  # author: ["Me", "You"] # multiple authors
+  images: [""]
+  DateFormat: "02/01/2006"
+  defaultTheme: light # dark, light
+  disableThemeToggle: true
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "https://blog.levandong.dev/images/favicon.ico"
+    favicon16x16: "https://blog.levandong.dev/images/favicon-16x16.png"
+    favicon32x32: "https://blog.levandong.dev/images/favicon-32x32.png"
+    apple_touch_icon: "https://blog.levandong.dev/images/apple-icon.png"
+    safari_pinned_tab: "https://blog.levandong.dev/images/apple-icon.png"
+    disableFingerprinting: true
+    disableHLJS: true
+
+  label:
+    # text: "Home"
+    icon: https://blog.levandong.dev/images/logo.png
+    iconHeight: 50
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: Xin chào! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" height="23"> <path d="M4 11a9 9 0 0 1 9 9"/>
+      <path d="M4 4a16 16 0 0 1 16 16"/> <circle cx="5" cy="19" r="1"/> </svg> </a>
+    Content: Developer này đang code.....
+
+  socialIcons:
+    # - name: x
+    #   url: "https://x.com/"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/itlvd"
+
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: "XYZabc"
+  #   bing:
+  #     SiteVerificationTag: "XYZabc"
+  #   yandex:
+  #     SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/itlvd//levandong.dev/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 200
+    threshold: 0.3
+    minMatchCharLength: 2
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "tags", "permalink", "summary", "content"]
+
+  noRecentPosts: # Don't print recents posts sections in these pages
+    - /about/
+    - /blogroll/
+    - /feed/
+
+menu:
+  main:
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 1
+
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 2
+
+    - identifier: archive
+      name: archive
+      url: /archive/
+      weight: 3
+
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 4
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    # lineNos: true
+    style: syntax-highlight
+    tabWidth: 4
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      linkifyProtocol: https
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute:
+        block: true
+        title: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+      wrapStandAloneImageWithinParagraph: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xhtml: false
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  page: ["HTML"]
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML", "RSS"]
+
+security:
+  funcs:
+    getenv:
+      - "^HUGO_"
+
+copyright: "
+  <a href='/blogroll'>blogroll</a> •
+  <a href='/about'>about</a>
+  "

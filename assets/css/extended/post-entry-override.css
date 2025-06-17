@@ -1,0 +1,18 @@
+.first-entry {
+  min-height: 150px;
+  text-align: left;
+  margin: 0.5rem;
+}
+.first-entry .entry-header h1 {
+  font-size: 2rem;
+}
+.first-entry .entry-content {
+  font-size: 16px;
+}
+.entry-header h2 {
+  font-size: 1.4rem;
+}
+.entry-content {
+  font-size: 15px;
+  line-height: 1.5;
+}
