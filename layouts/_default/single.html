@@ -1,5 +1,16 @@
 {{- define "main" }}
 
+<!-- Custom logic: add links to recent posts starts -->
+{{- $current := . }}
+{{- $excludeUrls := site.Params.noRecentPosts }}
+{{- $exclude := false }}
+
+{{- range $excludeUrls }}
+{{- if strings.HasPrefix $current.RelPermalink . }}
+{{- $exclude = true }}
+{{- end }}
+{{- end }}
+
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
@@ -37,17 +48,6 @@
     {{ if (.Params.mermaid) }}
     {{ partial "mermaid.html" }}
     {{ end }}
-
-<!-- Custom logic: add links to recent posts starts -->
-{{- $current := . }}
-{{- $excludeUrls := site.Params.noRecentPosts }}
-{{- $exclude := false }}
-
-{{- range $excludeUrls }}
-  {{- if strings.HasPrefix $current.RelPermalink . }}
-    {{- $exclude = true }}
-  {{- end }}
-{{- end }}
 
 {{- if not $exclude }}
   <div align="center">
