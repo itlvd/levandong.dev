@@ -4,8 +4,6 @@ title: "Extension trong C#?"
 date: "2024-09-24 02:19:32"
 tags: ["Dotnet", "CSharp"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Trong bài viết này, chúng ta sẽ cùng tìm hiểu về phương thức Extension trong C#. Đây là một phương thức rất hiệu quả trong việc thể hiện code một cách gọn gàng và dễ đọc hơn. Do đó, bạn có thể mở rộng class một cách thoải mái mà không cần lo ngại về việc thay đổi logic hay ảnh hưởng tới các class cũ.

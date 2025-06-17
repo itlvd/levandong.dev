@@ -4,8 +4,6 @@ title: "Khai thác luật kết hợp với thuật toán Apriori"
 date: "2021-10-20T17:31:25+07:00"
 tags: ["Data", "Math"]
 categories: ["Machine Learning"]
-ShowToc: false
-TocOpen: false
 ---
 
 ## Giới thiệu

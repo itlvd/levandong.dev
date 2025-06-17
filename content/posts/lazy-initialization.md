@@ -4,8 +4,6 @@ title: "Lazy giúp khởi tạo trong multithread"
 date: "2024-08-11"
 tags: ["CSharp", "Tips"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Ở bài viết [Singleton Pattern](/singleton-pattern/), tôi có trình bày về một cách đơn giản để tạo Singleton Pattern trong môi trường thread-safe bằng cách sử dụng Lazy<T>. Trong .Net, đây là một class được dùng để khởi tạo an toàn trong môi trường đa luồng.

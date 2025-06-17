@@ -4,8 +4,6 @@ title: "Fluid Communities - Thuật toán nhận diện cộng đồng"
 date: "2022-11-14 02:19:32"
 tags: ["Data", "Graph"]
 categories: ["Machine Learning"]
-ShowToc: false
-TocOpen: false
 ---
 
 ## A. Dẫn nhập

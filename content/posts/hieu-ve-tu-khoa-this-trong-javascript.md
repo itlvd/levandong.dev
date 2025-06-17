@@ -4,8 +4,6 @@ title: "Hiểu về từ khoá this trong Javascript"
 date: "2024-04-29 03:34:55"
 tags: ["Javascript", "Tips"]
 categories: ["Programming", "Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Với các bạn từng học các ngôn ngữ hướng đối tượng khác ví dụ như C#, Java,.. thì chắc hẳn bạn đã rất quen với khái niệm `this` . Và khi mình tìm hiểu một chút về từ khoá này thì mỗi ngôn ngữ sẽ có cách sử dụng khá khác nhau. Nhưng nhìn chung, mọi ngôn ngữ đều chung một mục đích hay sử dụng là phân biệt parameter của function và properties của class, ngoài ra còn một số cách sử dụng khác. Tuy nhiên, trong bài viết này, tôi sẽ trình bày với các bạn từ khoá this trong Javascript.

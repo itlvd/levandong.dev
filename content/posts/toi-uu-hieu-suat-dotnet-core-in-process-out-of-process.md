@@ -4,8 +4,6 @@ title: "Tối ưu hiệu suất .NET Core In-Process và Out-of-Process"
 date: "2024-11-10"
 tags: ["CSharp", "Tips"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Trong quá trình phát triển phần mềm, việc tối ưu hiệu suất luôn là vấn đề được quan tâm khi triển khai, đặc biệt trong .Net Core. Việc bạn lựa chọn các hosting model nào để chạy sẽ ảnh hưởng quan trọng đến hiệu suất của ứng dụng. Trong .Net có 2 phương pháp để hosting là In Process và Out Of Process.

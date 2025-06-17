@@ -4,8 +4,6 @@ title: "Factory Method là gì"
 date: "2024-11-08"
 tags: ["CSharp", "Creational Pattern"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Khi áp dụng một design pattern tốt sẽ giúp bạn tiết kiệm thời gian và công sức sau này. Bạn có thể tái sử dụng code, mở rộng khi cần thiết. Bạn có từng nhớ lần đọc code cuối cùng không? Bạn có thấy code của bạn dễ dàng chỉnh sửa mở rộng không? Nếu không, cùng tôi tìm hiểu về design pattern và cách áp dụng nó vào trong dự án của bạn.

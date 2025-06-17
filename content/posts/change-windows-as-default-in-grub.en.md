@@ -4,8 +4,6 @@ title: "Changing default Grub boot options"
 date: "2024-03-23 03:21:58"
 tags: ["Linux", "Tips"]
 categories: ["Linux", "Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Many people install dual boot both Windows and Linux. Some of them prefer set up Linux as a primary Operating System while some want to set Windows as their primary OS.

@@ -4,8 +4,6 @@ title: "Cách backup và khôi phục Ghost CMS"
 date: "2023-11-15 09:29:48"
 tags: ["Linux", "VPS"]
 categories: ["Linux", "Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Ghost đã không còn support SQLite trên production nữa. Bạn cần phải sử dụng MySQL 8 để cài đặt blog của mình. Dù vậy, bài viết này vẫn có giá trị với bạn, ngoại trừ phần SQL

@@ -4,8 +4,6 @@ title: "Các cách bật cài đặt cho Firefox"
 date: "2024-08-17 00:00:00"
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Firefox là một trình duyệt web nâng cao, để sử dụng nó bạn cần tối ưu theo cách của bạn. Nếu bạn cần một trình duyệt chỉ cần cài và dùng? Hãy chọn Chrome. Nếu bạn cần một trình duyệt đáp ứng được nhu cầu công việc, tối ưu hóa cách làm việc, tinh chỉnh cho phù hợp cá nhân thì bạn hãy chọn Firefox.

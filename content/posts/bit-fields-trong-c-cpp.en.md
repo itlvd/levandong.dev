@@ -4,8 +4,6 @@ title: "Bit Fields in C++ devide many variable with one byte"
 date: "2021-04-12 17:00:00"
 tags: ["C/C++", "Tips"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Structs are essential in C/C++ for creating new data types that simplify variable management. However, a lesser-known feature of C/C++ structs is Bit Fields, which allow you to allocate a specific number of bits for a variable, optimizing memory usage.

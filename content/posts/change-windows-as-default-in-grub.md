@@ -4,8 +4,6 @@ title: "Đổi grub boot mặc định"
 date: "2024-03-23 03:21:58"
 tags: ["Linux", "Tips"]
 categories: ["Linux", "Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Nhiều bạn cài song song hai hệ điều hành cho công việc và học tập như Windows và Linux. Một số bạn thích cài đặt Linux làm hệ điều hành mặc định. Tuy nhiên, cũng có những bạn muốn hệ điều hành chính là Windows.

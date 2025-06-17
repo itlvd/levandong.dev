@@ -4,8 +4,6 @@ title: "Cách sao lưu và khôi phục Firefox toàn vẹn"
 date: "2024-08-11"
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Firefox là một trình duyệt tốt và có nhiều tính năng hay như container, ưu tiên quyền riêng tư, có thể sử dụng Ublock, chụp web, chọn màu tự động,... Nhưng đặc biệt nhất có thể kể đến là tính năng sao lưu và khôi phục Firefox. Nếu bạn chưa đọc bài giới thiệu về Firefox, đọc bài [Firefox có gì hay?](/posts/firefox-co-gi-hay/) để tham khảo thêm các tính năng khác của Firefox.

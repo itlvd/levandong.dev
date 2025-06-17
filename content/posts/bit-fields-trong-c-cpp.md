@@ -4,8 +4,6 @@ title: "Bit Fields trong C chia nhiều biến chỉ với 1 byte"
 date: "2021-04-12 17:00:00"
 tags: ["C/C++", "Tips"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Struct là một phần không thể thiếu ở trong ngôn ngữ C/C++ nó giúp chúng ta tạo ra kiểu dữ liệu mới để dễ dàng quản lý các biến hơn. Tuy nhiên, có một số điều có thể các bạn chưa biết bí thuật về struct của C/C++. Chúng ta cùng tìm hiểu một trong các bí thuật đó là về Bit Fields, và cách áp dụng nó để tạo ra nhiều biến khác nhau với số bit nhất định nhé.

@@ -4,8 +4,6 @@ title: "Save data less in database using theory of bit in C#"
 date: "2024-08-06"
 tags: ["C-Sharp", "Tips"]
 categories: ["Programming"]
-ShowToc: false
-TocOpen: false
 ---
 
 Using bit fields in C/C++ might be familiar to you. In C/C++, bit fields allow you to create multiple variables within a single byte, within the limits of the bit representation. Today, I’m sharing a similar technique for C#. It's important to note that this method doesn't exactly mirror C/C++ bit fields. Instead of optimizing variable size at runtime, it focuses on optimizing data storage. This post will guide you through this technique and compare it with C/C++.

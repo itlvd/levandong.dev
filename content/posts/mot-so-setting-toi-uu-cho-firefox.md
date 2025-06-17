@@ -4,8 +4,6 @@ title: "Một số setting tối ưu cho Firefox"
 date: "2024-08-17 01:01:01"
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 Đây là một số tối ưu dành cho Firefox. Bạn tham khảo, cân nhắc và lựa chọn những setting phù hợp cho cấu hình máy cũng như nhu cầu của các bạn. Để thiết đặt các setting thì các bạn vui lòng đọc bài [Các cách bật cài đặt cho Firefox](/cach-bat-cai-dat-cho-firefox/).

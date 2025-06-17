@@ -4,8 +4,6 @@ title: "Firefox có gì hay?"
 date: "2024-08-04 02:19:32"
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
-ShowToc: false
-TocOpen: false
 ---
 
 ## Thế giới trình duyệt
