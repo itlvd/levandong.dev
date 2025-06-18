@@ -1,5 +1,68 @@
-<script src="https://giscus.app/client.js" data-repo="itlvd/levandong.dev" data-repo-id="R_kgDOO9PexQ"
-  data-category="Comment" data-category-id="DIC_kwDOO9Pexc4Crnpl" data-mapping="pathname" data-strict="0"
-  data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en"
-  data-loading="lazy" crossorigin="anonymous" async>
-  </script>
+<div id="giscus-comments"></div>
+
+<script>
+  function getTheme() {
+    const body = document.body;
+    if (body.classList.contains('dark')) {
+      return 'dark';
+    }
+    return 'light';
+  }
+
+  function setGiscusTheme(theme) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    
+    const message = {
+      giscus: {
+        setConfig: {
+          theme: theme === 'dark' ? 'dark' : 'light'
+        }
+      }
+    };
+    iframe.contentWindow.postMessage(message, 'https://giscus.app');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const theme = getTheme();
+    
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'itlvd/levandong.dev');
+    script.setAttribute('data-repo-id', 'R_kgDOO9PexQ');
+    script.setAttribute('data-category', 'Comment');
+    script.setAttribute('data-category-id', 'DIC_kwDOO9Pexc4Crnpl');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'top');
+    script.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
+    script.setAttribute('data-lang', 'en');
+    script.setAttribute('data-loading', 'lazy');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    
+    const giscusContainer = document.getElementById('giscus-comments');
+    if (giscusContainer) {
+      giscusContainer.appendChild(script);
+    } else {
+      document.removeEventListener('DOMContentLoaded', this);
+      return;
+    }
+    
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          const newTheme = getTheme();
+          setGiscusTheme(newTheme);
+        }
+      });
+    });
+    
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  });
+</script>

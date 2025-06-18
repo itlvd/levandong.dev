@@ -28,8 +28,8 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: [""]
   DateFormat: "02/01/2006"
-  defaultTheme: light # dark, light
-  disableThemeToggle: true
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
 
   ShowReadingTime: false
   ShowShareButtons: false
