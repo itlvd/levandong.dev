@@ -160,7 +160,7 @@ markup:
     codeFences: true
     guessSyntax: true
     # lineNos: true
-    style: syntax-highlight
+    # style: syntax-highlight
     tabWidth: 4
   goldmark:
     extensions:

@@ -26,7 +26,7 @@
 }
 
 .post-content pre code {
-  background: var(--code-bg) !important;
+  background: var(--code-block-bg) !important;
 }
 
 .toc {
