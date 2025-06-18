@@ -1,7 +1,7 @@
 baseURL: "https://levandong.dev/"
 title: Dong's Notes
 theme: PaperMod
-# defaultContentLanguage: "vi"
+defaultContentLanguage: "vi"
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -25,11 +25,11 @@ params:
   description: "Dong's Notes"
   keywords: [Blog, Lê Văn Đông, Go, Golang, Developer, Backend Developer, API, Database, Software Engineering]
   author: "Lê Văn Đông"
-  # author: ["Me", "You"] # multiple authors
   images: [""]
   DateFormat: "02/01/2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
+  displayFullLangName: true
 
   ShowReadingTime: false
   ShowShareButtons: false
@@ -48,8 +48,6 @@ params:
   tocopen: false
 
   assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
     favicon: "https://levandong.dev/images/favicon.ico"
     favicon16x16: "https://levandong.dev/images/favicon-16x16.png"
     favicon32x32: "https://levandong.dev/images/favicon-32x32.png"
@@ -68,7 +66,7 @@ params:
     enabled: false # needs to be explicitly set
     title: ExampleSite
     subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    imageUrl: "https://levandong.dev/images/logo.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
@@ -128,28 +126,71 @@ params:
     - /about/
     - /blogroll/
     - /feed/
+    - /en/about/
+    - /en/blogroll/
+    - /en/feed/
 
-menu:
-  main:
-    - identifier: search
-      name: search
-      url: /search/
-      weight: 1
+languages:
+  vi:
+    languageName: ":flag-vn:"
+    languageCode: vi
+    weight: 1
+    taxonomies:
+      tag: tags
+      category: categories
+      series: series
+    menu:
+      main:
+        - identifier: search
+          name: Tìm kiếm
+          url: /search/
+          weight: 1
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 2
+        - identifier: archive
+          name: Danh sách bài viết
+          url: /archive/
+          weight: 3
+        - identifier: about
+          name: Giới thiệu
+          url: /about/
+          weight: 4
+  en:
+    languageName: ":us:"
+    languageCode: en
+    weight: 2
+    taxonomies:
+      tag: tags
+      category: categories
+      series: series
+    menu:
+      main:
+        - identifier: search
+          name: search
+          url: en/search/
+          weight: 1
+        - identifier: tags
+          name: tags
+          url: en/tags/
+          weight: 2
+        - identifier: archive
+          name: archive
+          url: en/archive/
+          weight: 3
+        - identifier: about
+          name: about
+          url: en/about/
+          weight: 4
+    params:
+      homeInfoParams:
+        Title: Hello! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" height="23"> <path d="M4 11a9 9 0 0 1 9 9"/>
+          <path d="M4 4a16 16 0 0 1 16 16"/> <circle cx="5" cy="19" r="1"/> </svg> </a>
+        Content: Developer is coding.....
 
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 2
-
-    - identifier: archive
-      name: archive
-      url: /archive/
-      weight: 3
-
-    - identifier: about
-      name: about
-      url: /about/
-      weight: 4
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true

@@ -38,7 +38,7 @@
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'top');
     script.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
-    script.setAttribute('data-lang', 'en');
+    script.setAttribute('data-lang', document.documentElement.lang || 'en');
     script.setAttribute('data-loading', 'lazy');
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;

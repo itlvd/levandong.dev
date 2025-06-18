@@ -1,5 +1,5 @@
 ---
-title: 'About'
+title: 'Giới thiệu'
 layout: post
 ShowToc: false
 hideMeta: true
