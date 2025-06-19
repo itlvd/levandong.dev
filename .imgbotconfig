@@ -2,7 +2,7 @@
     "schedule": "daily",
     "ignoredFiles": [
         "*.ico",
-        ""favicon*,
+        "*favicon*",
         "logo.png",
     ],
     "aggressiveCompression": "true",
