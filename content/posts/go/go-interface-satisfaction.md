@@ -161,6 +161,6 @@ Vậy là trong thư viện có thể thực thi được implement của projec
 
 Hy vọng bạn có thể áp dụng được trong dự án của mình.
 
-## Tham khảo
+## C. Tham khảo
 
 [Dev.to - Checking if a Type Satisfies an Interface in Go](https://dev.to/kittipat1413/checking-if-a-type-satisfies-an-interface-in-go-432n)
