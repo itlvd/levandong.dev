@@ -124,10 +124,10 @@ params:
 
   noRecentPosts: # Don't print recents posts sections in these pages
     - /about/
-    - /blogroll/
+    - /privacy/
     - /feed/
     - /en/about/
-    - /en/blogroll/
+    - /en/privacy/
     - /en/feed/
 
 languages:
@@ -202,7 +202,7 @@ markup:
     guessSyntax: true
     # lineNos: true
     # style: syntax-highlight
-    tabWidth: 4
+    tabWidth: 2
   goldmark:
     extensions:
       definitionList: true
@@ -237,7 +237,4 @@ security:
     getenv:
       - "^HUGO_"
 
-copyright: "
-  <a href='/blogroll'>blogroll</a> •
-  <a href='/about'>about</a>
-  "
+copyright: ""
