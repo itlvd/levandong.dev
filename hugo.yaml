@@ -237,4 +237,7 @@ security:
     getenv:
       - "^HUGO_"
 
-copyright: ""
+copyright: "
+  <a href='/privacy'>privacy</a> •
+  <a href='/archive'>archive</a>
+ "
