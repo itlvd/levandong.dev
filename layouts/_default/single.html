@@ -49,39 +49,39 @@
     {{ partial "mermaid.html" }}
     {{ end }}
 
-{{- if not $exclude }}
-  <div align="center">
-    ~~~
-  </div>
-  <h2>Recent posts</h2>
-  <ul>
-    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections | first 11 }}
-    {{- $.Scratch.Set "count" 0 }}
+    {{- if not $exclude }}
+    <div align="center">
+      ~~~
+    </div>
+    <h2>Recent posts</h2>
+    <ul>
+      {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections | first 11 }}
+      {{- $.Scratch.Set "count" 0 }}
 
-    {{- range $pages }}
+      {{- range $pages }}
       {{- $page := . }} <!-- Save the current page context -->
       {{- $pageExclude := false }}
 
       {{- range $excludeUrls }}
-        {{- if strings.HasPrefix $page.RelPermalink . }} <!-- Use $page to ensure proper context -->
-          {{- $pageExclude = true }}
-        {{- end }}
+      {{- if strings.HasPrefix $page.RelPermalink . }} <!-- Use $page to ensure proper context -->
+      {{- $pageExclude = true }}
+      {{- end }}
       {{- end }}
 
       {{- if not $pageExclude }}
-        {{- if lt ($.Scratch.Get "count") 10 }}
-          {{- if ne $page $current }}
-            <li><a href="{{ $page.Permalink }}">{{ $page.LinkTitle }}</a></li>
-            {{- $.Scratch.Add "count" 1 }}
-          {{- end }}
-        {{- end }}
+      {{- if lt ($.Scratch.Get "count") 10 }}
+      {{- if ne $page $current }}
+      <li><a href="{{ $page.Permalink }}">{{ $page.LinkTitle }}</a></li>
+      {{- $.Scratch.Add "count" 1 }}
+      {{- end }}
+      {{- end }}
       {{- end }}
 
+      {{- end }}
+    </ul>
     {{- end }}
-  </ul>
-{{- end }}
-<!-- Custom logic: add links to recent posts ends -->
-</div>
+    <!-- Custom logic: add links to recent posts ends -->
+  </div>
 
   </div>
   {{- end }}
@@ -105,5 +105,12 @@
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
+
+{{ if .Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+{{ end }}
 
 {{- end }}{{/* end main */}}
