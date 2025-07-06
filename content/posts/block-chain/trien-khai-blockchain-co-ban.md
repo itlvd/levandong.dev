@@ -97,7 +97,7 @@ type Block struct {
 
 Chúng ta sẽ thực hiện hash toàn bộ thông tin của block kể cả timestamp, prevHash, Nonce. Ở đây tôi chọn sha256.
 
-Bạn có thể thấy, nội dung của block là bất biến, cho nên cần có một tham số số tùy biến để gây khó khăn trong quá trình hash block sao cho thỏa mãn điều kiện độ khó của mạng.
+Bạn có thể thấy, nội dung của block là bất biến, cho nên cần có một tham số số tùy biến để gây khó khăn trong quá trình hash block sao cho thỏa mãn điều kiện độ khó của mạng, ở đây là số Nonce.
 
 ```go
 func (b *Block) CalculateHash() string {
