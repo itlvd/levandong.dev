@@ -1,5 +1,5 @@
 ---
-title: "Clean Code"
+title: "Review book: Clean Code"
 date: "2026-03-07"
 description: "How to write code that is clean, easy to understand, and easy to maintain."
 bookCover: "https://m.media-amazon.com/images/I/71nj3JM-igL._SY342_.jpg"
