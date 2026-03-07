@@ -1,23 +1,23 @@
 - id: translations
-  translation: "bản dịch"
+  translation: "Bản dịch"
 
 - id: footer_privacy
-  translation: "quyền riêng tư"
+  translation: "Quyền riêng tư"
 
 - id: footer_archive
-  translation: "danh sách bài viết"
+  translation: "Danh sách bài viết"
 
 - id: books_reading
-  translation: "đang đọc"
+  translation: "Đang đọc"
 
 - id: books_read
-  translation: "đã đọc"
+  translation: "Đã đọc"
 
 - id: books_author
-  translation: "tác giả"
+  translation: "Tác giả"
 
 - id: books_status
-  translation: "trạng thái"
+  translation: "Trạng thái"
 
 - id: books_rating
-  translation: "đánh giá"
+  translation: "Đánh giá"

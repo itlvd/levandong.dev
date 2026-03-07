@@ -20,6 +20,7 @@ minify:
   minifyOutput: true
 
 params:
+  mainSections: ["posts", "books"]
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Dong's Notes
   description: "Dong's Notes"
@@ -153,23 +154,23 @@ languages:
     menu:
       main:
         - identifier: search
-          name: tìm kiếm
+          name: Tìm kiếm
           url: /search/
           weight: 1
         - identifier: tags
-          name: tags
+          name: Tags
           url: /tags/
           weight: 2
         - identifier: archive
-          name: danh sách bài viết
+          name: Danh sách bài viết
           url: /archive/
           weight: 3
         - identifier: about
-          name: giới thiệu
+          name: Giới thiệu
           url: /about/
           weight: 4
         - identifier: books
-          name: sách
+          name: Sách
           url: /books/
           weight: 5
   en:
@@ -183,23 +184,23 @@ languages:
     menu:
       main:
         - identifier: search
-          name: search
+          name: Search
           url: en/search/
           weight: 1
         - identifier: tags
-          name: tags
+          name: Tags
           url: en/tags/
           weight: 2
         - identifier: archive
-          name: archive
+          name: Archive
           url: en/archive/
           weight: 3
         - identifier: about
-          name: about
+          name: About
           url: en/about/
           weight: 4
         - identifier: books
-          name: books
+          name: Books
           url: /en/books/
           weight: 5
     params:
