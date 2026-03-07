@@ -1,17 +1,23 @@
 - id: translations
-  translation: "Translations"
+  translation: "translations"
+
+- id: footer_privacy
+  translation: "privacy"
+
+- id: footer_archive
+  translation: "archive"
 
 - id: books_reading
-  translation: "Currently Reading"
+  translation: "currently reading"
 
 - id: books_read
-  translation: "Read"
+  translation: "read"
 
 - id: books_author
-  translation: "Author"
+  translation: "author"
 
 - id: books_status
-  translation: "Status"
+  translation: "status"
 
 - id: books_rating
-  translation: "Rating"
+  translation: "rating"
