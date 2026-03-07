@@ -1,0 +1,58 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+
+  {{- if .Params.bookCover }}
+  <div class="book-single-cover">
+    <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" loading="lazy">
+  </div>
+  {{- end }}
+
+  <div class="book-single-meta">
+    {{- if .Params.bookAuthor }}
+    <p><strong>{{ i18n "books_author" }}:</strong> {{ .Params.bookAuthor }}</p>
+    {{- end }}
+    {{- if .Params.status }}
+    <p><strong>{{ i18n "books_status" }}:</strong>
+      {{- if eq .Params.status "reading" }} 📖 {{ i18n "books_reading" }}
+      {{- else if eq .Params.status "read" }} ✅ {{ i18n "books_read" }}
+      {{- end }}
+    </p>
+    {{- end }}
+    {{- if .Params.rating }}
+    <p><strong>{{ i18n "books_rating" }}:</strong> {{ .Params.rating }}/5 ⭐</p>
+    {{- end }}
+  </div>
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+  </footer>
+</article>
+
+{{- end }}{{/* end main */}}

@@ -1,0 +1,17 @@
+- id: translations
+  translation: "Bản dịch"
+
+- id: books_reading
+  translation: "Đang đọc"
+
+- id: books_read
+  translation: "Đã đọc"
+
+- id: books_author
+  translation: "Tác giả"
+
+- id: books_status
+  translation: "Trạng thái"
+
+- id: books_rating
+  translation: "Đánh giá"

@@ -1,0 +1,17 @@
+- id: translations
+  translation: "Translations"
+
+- id: books_reading
+  translation: "Currently Reading"
+
+- id: books_read
+  translation: "Read"
+
+- id: books_author
+  translation: "Author"
+
+- id: books_status
+  translation: "Status"
+
+- id: books_rating
+  translation: "Rating"

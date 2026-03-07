@@ -1,0 +1,87 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+  {{- if .IsTranslated }}
+  <div class="post-meta">
+    {{- i18n "translations" | default "Translations" }}:
+    <ul class="i18n_list">
+      {{- range .Translations }}
+      <li>
+        <a href="{{ .Permalink }}">
+          {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
+          {{- .Language.LanguageName | emojify -}}
+          {{- else }}
+          {{- .Lang | title -}}
+          {{- end -}}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</header>
+
+{{- $readingPages := where .Pages "Params.status" "reading" }}
+{{- $readPages := where .Pages "Params.status" "read" }}
+
+{{- if $readingPages }}
+<h2 class="books-section-title">📖 {{ i18n "books_reading" }}</h2>
+<div class="books-grid">
+  {{- range $readingPages }}
+  <a class="book-card" href="{{ .Permalink }}">
+    {{- if .Params.bookCover }}
+    <div class="book-cover">
+      <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" loading="lazy">
+    </div>
+    {{- else }}
+    <div class="book-cover book-cover-placeholder">
+      <span>{{ .Title | truncate 40 }}</span>
+    </div>
+    {{- end }}
+    <div class="book-info">
+      <h3 class="book-title">{{ .Title }}</h3>
+      {{- if .Params.bookAuthor }}
+      <p class="book-author">{{ .Params.bookAuthor }}</p>
+      {{- end }}
+      {{- if .Description }}
+      <p class="book-description">{{ .Description | truncate 120 }}</p>
+      {{- end }}
+    </div>
+  </a>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- if $readPages }}
+<h2 class="books-section-title">✅ {{ i18n "books_read" }}</h2>
+<div class="books-grid">
+  {{- range $readPages }}
+  <a class="book-card" href="{{ .Permalink }}">
+    {{- if .Params.bookCover }}
+    <div class="book-cover">
+      <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" loading="lazy">
+    </div>
+    {{- else }}
+    <div class="book-cover book-cover-placeholder">
+      <span>{{ .Title | truncate 40 }}</span>
+    </div>
+    {{- end }}
+    <div class="book-info">
+      <h3 class="book-title">{{ .Title }}</h3>
+      {{- if .Params.bookAuthor }}
+      <p class="book-author">{{ .Params.bookAuthor }}</p>
+      {{- end }}
+      {{- if .Description }}
+      <p class="book-description">{{ .Description | truncate 120 }}</p>
+      {{- end }}
+    </div>
+  </a>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- end }}{{/* end main */}}

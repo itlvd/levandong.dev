@@ -23,7 +23,18 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Dong's Notes
   description: "Dong's Notes"
-  keywords: [Blog, Lê Văn Đông, Go, Golang, Developer, Backend Developer, API, Database, Software Engineering]
+  keywords:
+    [
+      Blog,
+      Lê Văn Đông,
+      Go,
+      Golang,
+      Developer,
+      Backend Developer,
+      API,
+      Database,
+      Software Engineering,
+    ]
   author: "Lê Văn Đông"
   images: [""]
   DateFormat: "02/01/2006"
@@ -157,6 +168,10 @@ languages:
           name: Giới thiệu
           url: /about/
           weight: 4
+        - identifier: books
+          name: Sách
+          url: /books/
+          weight: 5
   en:
     languageName: ":us:"
     languageCode: en
@@ -183,6 +198,10 @@ languages:
           name: about
           url: en/about/
           weight: 4
+        - identifier: books
+          name: books
+          url: /en/books/
+          weight: 5
     params:
       homeInfoParams:
         Title: Hello! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
@@ -190,7 +209,6 @@ languages:
           stroke="currentColor" stroke-width="2" height="23"> <path d="M4 11a9 9 0 0 1 9 9"/>
           <path d="M4 4a16 16 0 0 1 16 16"/> <circle cx="5" cy="19" r="1"/> </svg> </a>
         Content: Developer is fixing bugs.....
-
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -240,4 +258,4 @@ security:
 copyright: "
   <a href='/privacy'>privacy</a> •
   <a href='/archive'>archive</a>
- "
+  "
