@@ -21,3 +21,9 @@
 
 - id: books_rating
   translation: "Đánh giá"
+
+- id: subscribe_button
+  translation: "Đăng ký"
+
+- id: subscribe_placeholder
+  translation: "you@email.com"

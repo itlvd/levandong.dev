@@ -2,8 +2,6 @@
 title: "Home"
 ---
 
-Hi, I'm **Lê Văn Đông**. Welcome to my blog — this is mainly a place where I take notes on what I learn so I can easily find them later. If it helps you too, that makes me even happier.
+In the volatile city of data, there’s a Backend coder who’s spent three years "grinding" through everything from Payments to Streaming. A hawk who loathes the "iron cage" of Windows, he ditched the .NET gang to go rogue and join the Golang empire.
 
-You can contribute to articles by clicking the link at the bottom-left of any post and creating a pull request. Thank you so much!
-
-This blog is designed with a minimalist style, prioritizing speed and readability. I believe my articles provide a great reading experience.
+Though the new crew is short on gear, he’s busy forging his own "heavy artillery" to dominate the system. But that’s not enough; he still haunts tech teahouses, hunting for more lethal tricks to truly rule this realm. Any brother willing to ride or die, leave your mark in the form below.

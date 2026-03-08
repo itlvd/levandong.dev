@@ -21,3 +21,9 @@
 
 - id: books_rating
   translation: "Rating"
+
+- id: subscribe_button
+  translation: "Subscribe"
+
+- id: subscribe_placeholder
+  translation: "you@email.com"

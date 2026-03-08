@@ -2,8 +2,6 @@
 title: "Trang chủ"
 ---
 
-Xin chào, mình là **Lê Văn Đông**. Chào mừng bạn ghé thăm blog và blog này được lập ra chủ yếu là nơi ghi chép những gì mình học được để sau này tìm lại cho thật dễ dàng, tuy nhiên nếu nó có thể giúp ích được cho bạn mình cũng sẽ rất vui.
+Giữa thành phố dữ liệu đầy biến động, có gã thợ mã Backend đã dành ba năm "ăn hành" xuyên lục địa từ Payment đến Streaming. Vốn là loài chim ưng ghét cái "lồng sắt" Windows của băng đảng .NET, gã quyết dứt áo ra đi, một mình "nhảy hố" đầu quân cho đế chế Golang.
 
-Bạn có thể đóng góp vào bài viết bằng cách click vào góc trái dưới cùng của bài viết và tạo pull request để giúp mình sửa bài viết cho hoàn chỉnh. Cảm ơn các bạn rất nhiều.
-
-Blog được thiết kế theo phong cách tối giản, tinh gọn và ưu tiên tốc độ tải trang. Mình tin rằng các bài viết của mình đem đến trải nghiệm đọc rất tốt.
+Dù băng mới "đồ chơi" còn sơ khai, gã vẫn tự tay rèn lấy "hàng nóng" để độc hành giới hệ thống. Thế nhưng bấy nhiêu vẫn chưa đủ "phê"; gã vẫn lang thang khắp các quán trà công nghệ, săn lùng những ngón nghề tàn độc hơn để thực sự làm chủ xứ sở này. Vị huynh đệ nào muốn cùng gã vào sinh ra tử, hãy để lại danh tính tại form bên dưới.

@@ -91,7 +91,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: Xin chào! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
+    Title: Huynh đệ! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2" height="23"> <path d="M4 11a9 9 0 0 1 9 9"/>
       <path d="M4 4a16 16 0 0 1 16 16"/> <circle cx="5" cy="19" r="1"/> </svg> </a>
@@ -166,10 +166,10 @@ languages:
           name: Danh sách bài viết
           url: /archive/
           weight: 3
-        - identifier: about
-          name: Giới thiệu
-          url: /about/
-          weight: 4
+        # - identifier: about
+        #   name: Giới thiệu
+        #   url: /about/
+        #   weight: 4
         - identifier: books
           name: Sách
           url: /books/
@@ -196,17 +196,17 @@ languages:
           name: Archive
           url: en/archive/
           weight: 3
-        - identifier: about
-          name: About
-          url: en/about/
-          weight: 4
+        # - identifier: about
+        #   name: About
+        #   url: en/about/
+        #   weight: 4
         - identifier: books
           name: Books
           url: /en/books/
           weight: 5
     params:
       homeInfoParams:
-        Title: Hello! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
+        Title: Salute, brother! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" height="23"> <path d="M4 11a9 9 0 0 1 9 9"/>
           <path d="M4 4a16 16 0 0 1 16 16"/> <circle cx="5" cy="19" r="1"/> </svg> </a>

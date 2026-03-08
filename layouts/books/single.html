@@ -53,6 +53,10 @@
     {{- partial "post_nav_links.html" . }}
     {{- end }}
   </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
 </article>
 
 {{- end }}{{/* end main */}}
