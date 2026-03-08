@@ -1,0 +1,105 @@
+/* ===== Home Info - Two Column Hero ===== */
+.home-info {
+    margin: 0 0 var(--gap) 0;
+    padding: 0;
+    border: none;
+    background: #fefcf6;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 2px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.dark .home-info {
+    background: var(--entry);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home-info-container {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+}
+
+.home-info-image {
+    flex: 0 0 45%;
+    max-width: 45%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.home-info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+.home-info-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2);
+}
+
+.home-info-content .entry-header h1 {
+    color: #1a1a1a;
+}
+
+.dark .home-info-content .entry-header h1 {
+    color: var(--primary);
+}
+
+.home-info-content .entry-content {
+    color: #3a3a3a;
+}
+
+.dark .home-info-content .entry-content {
+    color: var(--content);
+}
+
+.home-info-content .entry-header h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.home-info-content .entry-content {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--secondary);
+    overflow: visible;
+    display: block;
+}
+
+.home-info-content .entry-content p {
+    margin-bottom: 14px;
+}
+
+.home-info-content .entry-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== Responsive: stack vertically on mobile ===== */
+@media (max-width: 768px) {
+    .home-info-container {
+        flex-direction: column;
+        gap: var(--gap);
+    }
+
+    .home-info-image {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .home-info-image img {
+        max-height: 350px;
+    }
+
+    .home-info-content {
+        padding: 0;
+    }
+}

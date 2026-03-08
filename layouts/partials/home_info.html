@@ -1,10 +1,24 @@
-{{- with site.Params.homeInfoParams }}
+{{- if site.Params.homeInfoParams }}
 <article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
-    </header>
-    <div class="entry-content">
-        {{ .Content | markdownify }}
+    <div class="home-info-container">
+        {{- with site.Params.homeImage }}
+        <div class="home-info-image">
+            <img src="{{ . }}" alt="Home Image" loading="lazy" />
+        </div>
+        {{- end }}
+        <div class="home-info-content">
+            <header class="entry-header">
+                <h1>{{ site.Params.homeInfoParams.Title | markdownify }}</h1>
+            </header>
+            <div class="entry-content">
+                {{- /* Prefer _index.md content, fallback to homeInfoParams.Content */ -}}
+                {{- if $.Content }}
+                    {{ $.Content }}
+                {{- else }}
+                    {{ site.Params.homeInfoParams.Content | markdownify }}
+                {{- end }}
+            </div>
+        </div>
     </div>
 </article>
 {{- end -}}

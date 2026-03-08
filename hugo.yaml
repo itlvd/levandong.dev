@@ -37,6 +37,7 @@ params:
       Software Engineering,
     ]
   author: "Lê Văn Đông"
+  homeImage: "/images/personal.webp" # Thay bằng ảnh thật của bạn
   images: [""]
   DateFormat: "02/01/2006"
   defaultTheme: auto # dark, light
