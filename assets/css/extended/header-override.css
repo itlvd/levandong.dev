@@ -65,6 +65,10 @@
   border-bottom: 2px solid currentColor;
 }
 
+#menu-close-container {
+  display: none;
+}
+
 /* Mobile Hamburger Menu */
 #menu-trigger {
   display: none;
@@ -133,6 +137,7 @@
   }
 
   #menu-close-container {
+    display: block;
     position: absolute;
     top: 15px;
     right: 15px;

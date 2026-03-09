@@ -37,10 +37,13 @@
 
 .home-info-content {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2);
+    padding: calc(var(--gap) * 1.5);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .home-info-content .entry-header h1 {
