@@ -99,8 +99,8 @@
 
     .home-info-image img {
         width: 100%;
-        max-height: 280px;
-        object-fit: cover;
+        height: auto;
+        display: block;
     }
 
     .home-info-content {
