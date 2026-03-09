@@ -116,20 +116,24 @@
                         </ul>
                         {{- end }}
                         <button id="menu-trigger" aria-haspopup="true" aria-label="Menu">
-                            <svg id="menu-icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
                                 <line x1="3" y1="12" x2="21" y2="12"></line>
                                 <line x1="3" y1="6" x2="21" y2="6"></line>
                                 <line x1="3" y1="18" x2="21" y2="18"></line>
-                            </svg>
-                            <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x" style="display: none;">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
                             </svg>
                         </button>
                     </div>
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
+            <li id="menu-close-container">
+                <button id="menu-close" aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </li>
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
@@ -160,29 +164,19 @@
 <script>
     const menuTrigger = document.getElementById("menu-trigger");
     const menu = document.getElementById("menu");
-    const hamburgerIcon = document.getElementById("menu-icon-hamburger");
-    const closeIcon = document.getElementById("menu-icon-close");
+    const menuClose = document.getElementById("menu-close");
 
-    if (menuTrigger && menu && hamburgerIcon && closeIcon) {
+    if (menuTrigger && menu && menuClose) {
         menuTrigger.addEventListener("click", (e) => {
             e.stopPropagation();
-            menu.classList.toggle("show");
-            
-            if (menu.classList.contains("show")) {
-                hamburgerIcon.style.display = "none";
-                closeIcon.style.display = "block";
-            } else {
-                hamburgerIcon.style.display = "block";
-                closeIcon.style.display = "none";
-            }
+            menu.classList.add("show");
+            document.body.style.overflow = "hidden";
         });
 
-        document.addEventListener("click", (e) => {
-            if (!menu.contains(e.target) && menu.classList.contains("show")) {
-                menu.classList.remove("show");
-                hamburgerIcon.style.display = "block";
-                closeIcon.style.display = "none";
-            }
+        menuClose.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menu.classList.remove("show");
+            document.body.style.overflow = "auto";
         });
     }
 </script>
