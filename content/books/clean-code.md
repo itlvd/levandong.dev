@@ -28,7 +28,7 @@ Với mỗi gạch đầu dòng, bạn sẽ tìm thấy lý do và ví dụ minh
 
 ## Đang đọc đến đâu
 
-Hiện tại tôi đã đọc được 2 chương là Name và Function và đang đọc tiếp chương Formatting. Phần này đang nói về vấn đề chuẩn hóa việc tổ chức code sao cho gọn gàng.
+Hiện tại tôi đang đọc tiếp chương Objects and Data Structures.
 
 ## Những gì đã học được
 
@@ -57,6 +57,10 @@ Hiện tại tôi đã đọc được 2 chương là Name và Function và đan
 - Tránh side effect. Tránh thay đổi ẩn trong hàm vì khi dùng dễ quên, không nhớ, phải đọc kỹ nội dung hàm thay vì chỉ cần đọc tên hàm.
 - Nên phân biệt rõ giữa command và query khi viết hàm và đặt tên đúng.
 - Không nên lặp lại code. Hãy tái sử dụng code thông qua các hàm hoặc lớp để giảm sự trùng lặp và tăng tính bảo trì.
+
+### Formatting
+
+Đa số format đều rất cơ bản, tôi không nghĩ là có gì quá đặc biệt. Nếu phải tóm gọn lại có thể nói rằng: những dòng code nào có liên quan với nhau thì nên để gần nhau, khai báo attribute thì nên khai báo ở đầu lớp.
 
 ## Nhận xét ban đầu
 

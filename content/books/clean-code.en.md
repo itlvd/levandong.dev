@@ -28,7 +28,7 @@ For each of these points, you'll find detailed reasoning and concrete examples i
 
 ## Reading Progress
 
-So far, I've finished two chapters — Naming and Functions — and I'm currently reading the Formatting chapter. This section discusses how to standardize code organization to keep things clean and tidy.
+I'm currently reading the Objects and Data Structures chapter.
 
 ## What I've Learned
 
@@ -57,6 +57,10 @@ So far, I've finished two chapters — Naming and Functions — and I'm currentl
 - Avoid side effects. Hidden changes within a function are easy to forget and force the reader to dig into the implementation rather than simply reading the function name.
 - Clearly distinguish between commands and queries when writing and naming functions.
 - Don't repeat code. Reuse code through functions or classes to reduce duplication and improve maintainability.
+
+### Formatting
+
+Most formatting rules are quite basic, and there's nothing particularly special about them. In summary, lines of code that are related should be placed close to each other, and attributes should be declared at the beginning of the class.
 
 ## Initial Thoughts
 
