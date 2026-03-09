@@ -88,6 +88,7 @@
     flex-direction: column !important;
     align-items: flex-start !important;
     flex-wrap: nowrap !important;
+    position: relative;
   }
 
   .logo {
@@ -114,7 +115,7 @@
     border-radius: var(--radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     position: absolute;
-    top: calc(var(--header-height) - 10px);
+    top: calc(100% - 10px);
     right: var(--gap);
     left: auto;
     z-index: 1000;
