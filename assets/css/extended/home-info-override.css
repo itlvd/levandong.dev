@@ -1,6 +1,19 @@
 /* ===== Home Info - Two Column Hero ===== */
+.home-hero-shell {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: var(--gap);
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--gap);
+    box-sizing: border-box;
+}
+
 .home-info {
-    margin: 0 0 var(--gap) 0;
+    width: 100%;
+    max-width: var(--nav-width);
+    margin: 0;
     padding: 0;
     border: none;
     background: #fefcf6;
@@ -41,7 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: calc(var(--gap) * 1.5);
+    padding: calc(var(--gap) * 2) calc(var(--gap) * 2.5);
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
