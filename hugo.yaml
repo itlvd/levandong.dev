@@ -13,7 +13,7 @@ permalinks:
   posts: /:contentbasename/
 
 pagination:
-  pagerSize: 7
+  pagerSize: 4
 
 minify:
   disableXML: true
