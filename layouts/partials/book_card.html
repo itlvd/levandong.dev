@@ -9,6 +9,11 @@
   </div>
   {{- end }}
   <div class="book-info">
+    {{- if .Params.status }}
+    <span class="book-status-badge book-status-{{ .Params.status }} book-card-status">
+      {{- partial "book_status_label.html" .Params.status }}
+    </span>
+    {{- end }}
     <h3 class="book-title">{{ .Title }}</h3>
     {{- if .Params.bookAuthor }}
     <p class="book-author">{{ .Params.bookAuthor }}</p>

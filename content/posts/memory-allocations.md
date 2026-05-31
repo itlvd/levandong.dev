@@ -430,7 +430,7 @@ Trong bộ nhớ ảo đó, chúng sẽ được chia thành nhiều phân vùng
            data-color="#FF8C42"
            data-title="Stack Segment"
            data-badge="Go: Goroutine Stack"
-           data-body="<p>Mỗi <b>Goroutine</b> có Stack riêng, khởi đầu nhỏ (~2KB) và tự động co giãn khi cần (segmented/copy stack).</p><p>Dùng để cấp phát cho <b>tham số hàm</b> và <b>biến cục bộ</b> không bị escape ra ngoài phạm vi hàm.</p><ul><li>Cấp phát cực nhanh — chỉ cần dịch chuyển con trỏ stack.</li><li>GC không cần quản lý — biến tự giải phóng khi hàm return.</li><li>Mỗi Goroutine có stack độc lập, không chia sẻ với nhau.</li></ul>">
+           data-body="<p>Mỗi <b>Goroutine</b> có Stack riêng, khởi đầu nhỏ (~2KB) và tự động co giãn khi cần (segmented/copy stack).</p><p>Dùng để cấp phát cho <b>tham số hàm</b> và <b>biến cục bộ</b> không bị escape ra ngoài phạm vi hàm.</p><ul><li>Cấp phát cực nhanh - chỉ cần dịch chuyển con trỏ stack.</li><li>GC không cần quản lý - biến tự giải phóng khi hàm return.</li><li>Mỗi Goroutine có stack độc lập, không chia sẻ với nhau.</li></ul>">
         Stack Segment
       </div>
 
@@ -444,7 +444,7 @@ Trong bộ nhớ ảo đó, chúng sẽ được chia thành nhiều phân vùng
            data-color="#22c55e"
            data-title="Heap Segment"
            data-badge="Go: GC Managed"
-           data-body='<p>Nơi chứa dữ liệu động — biến bị <b>escape</b> khỏi stack (theo kết quả Escape Analysis của compiler).</p><div class="mlw-codeblock">ptr   := new(MyStruct)&#10;slice := make([]int, 1024)&#10;m     := make(map[string]int)</div><ul><li><b>Garbage Collector</b> tự động dọn dẹp — không cần <code>free()</code>.</li><li>Cấp phát chậm hơn Stack do GC phải theo dõi.</li><li>Dùng <code>go build -gcflags=&quot;-m&quot;</code> để xem escape analysis.</li></ul>'>
+           data-body='<p>Nơi chứa dữ liệu động - biến bị <b>escape</b> khỏi stack (theo kết quả Escape Analysis của compiler).</p><div class="mlw-codeblock">ptr   := new(MyStruct)&#10;slice := make([]int, 1024)&#10;m     := make(map[string]int)</div><ul><li><b>Garbage Collector</b> tự động dọn dẹp - không cần <code>free()</code>.</li><li>Cấp phát chậm hơn Stack do GC phải theo dõi.</li><li>Dùng <code>go build -gcflags=&quot;-m&quot;</code> để xem escape analysis.</li></ul>'>
         Heap Segment
       </div>
 
@@ -471,7 +471,7 @@ Trong bộ nhớ ảo đó, chúng sẽ được chia thành nhiều phân vùng
            data-color="#d946ef"
            data-title="Code Segment"
            data-badge="Text / Read-only"
-           data-body="<p>Lưu trữ <b>mã máy (machine code)</b> của chương trình Go sau khi được <code>go build</code> biên dịch thành binary.</p><ul><li><b>Read-only</b> — OS bảo vệ, không thể ghi đè lúc runtime.</li><li>Có thể được nhiều process chia sẻ (shared library).</li><li>Bao gồm cả mã của Go runtime và GC.</li></ul>">
+           data-body="<p>Lưu trữ <b>mã máy (machine code)</b> của chương trình Go sau khi được <code>go build</code> biên dịch thành binary.</p><ul><li><b>Read-only</b> - OS bảo vệ, không thể ghi đè lúc runtime.</li><li>Có thể được nhiều process chia sẻ (shared library).</li><li>Bao gồm cả mã của Go runtime và GC.</li></ul>">
         Code Segment
       </div>
 
@@ -614,11 +614,11 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
     padding: 4px 0;
     font-family: inherit;
 
-    /* Semantic state accents — giữ nhất quán giữa light/dark */
-    --hr-accent:  #7c3aed;  /* purple — active references */
-    --hr-success: #15803d;  /* green  — protected/safe */
-    --hr-danger:  #dc2626;  /* red    — dangling/danger */
-    --hr-warning: #d97706;  /* amber  — pending */
+    /* Semantic state accents - giữ nhất quán giữa light/dark */
+    --hr-accent:  #7c3aed;  /* purple - active references */
+    --hr-success: #15803d;  /* green  - protected/safe */
+    --hr-danger:  #dc2626;  /* red    - dangling/danger */
+    --hr-warning: #d97706;  /* amber  - pending */
 
     /* Neutrals theo theme cha */
     --hr-text-muted:     color-mix(in srgb, currentColor 60%, transparent);
@@ -901,7 +901,7 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
                 <div class="hr-log" id="hrLog">
                     <div class="hr-log-line">
                         <span class="hr-log-icon">💡</span>
-                        <span class="hr-log-text">—</span>
+                        <span class="hr-log-text">-</span>
                     </div>
                 </div>
             </div>
@@ -1011,10 +1011,10 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
         var lbl = document.getElementById('hrHeaderLabel');
         if (m === 'gc') {
             dot.className   = 'hr-head-dot hr-head-dot--gc';
-            lbl.textContent = 'Go — GC theo dõi references, tự thu hồi khi không còn ai dùng';
+            lbl.textContent = 'Go - GC theo dõi references, tự thu hồi khi không còn ai dùng';
         } else {
             dot.className   = 'hr-head-dot hr-head-dot--manual';
-            lbl.textContent = 'C/C++ — lập trình viên tự gọi free(), không có lưới an toàn';
+            lbl.textContent = 'C/C++ - lập trình viên tự gọi free(), không có lưới an toàn';
         }
         hrReset(true);
     };
@@ -1052,7 +1052,7 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
             '<strong class="hr-text-danger">varB vẫn giữ địa chỉ vùng nhớ đã bị giải phóng!</strong>';
         setLog('err', [
             {icon:'⚠️', text:'<code>free(varA)</code> đã giải phóng vùng nhớ <code>0xC0001</code>.', cls:'err'},
-            {icon:'💥', text:'<code>varB</code> vẫn trỏ đến đó — <strong>dangling pointer</strong>. Truy cập <code>varB.Name</code> là undefined behavior: crash, đọc rác, hoặc lỗ hổng bảo mật.', cls:'err'}
+            {icon:'💥', text:'<code>varB</code> vẫn trỏ đến đó - <strong>dangling pointer</strong>. Truy cập <code>varB.Name</code> là undefined behavior: crash, đọc rác, hoặc lỗ hổng bảo mật.', cls:'err'}
         ]);
     };
 
@@ -1064,24 +1064,24 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
         refreshNilBtns();
 
         if (!freed) setHeap(rc === 0 ? 'hr-h-pending' : 'hr-h-protected',
-                            rc === 0 ? 'struct User — chờ GC' : 'struct User');
+                            rc === 0 ? 'struct User - chờ GC' : 'struct User');
 
         document.getElementById('hrStackNote').innerHTML = rc > 0
-            ? '<span class="hr-text-success">varB vẫn tham chiếu — GC sẽ không xóa object.</span>'
+            ? '<span class="hr-text-success">varB vẫn tham chiếu - GC sẽ không xóa object.</span>'
             : 'Không còn biến nào tham chiếu. Sẵn sàng để GC thu hồi.';
 
         if (rc > 0) {
             note(true, '', 'GC đang theo dõi',
-                '<code>varA = nil</code> — varA bỏ tham chiếu.<br><strong>varB vẫn còn</strong> (ref count = ' + rc + ') → GC giữ nguyên object.');
+                '<code>varA = nil</code> - varA bỏ tham chiếu.<br><strong>varB vẫn còn</strong> (ref count = ' + rc + ') → GC giữ nguyên object.');
             setLog('gc', [
-                {icon:'✓',  text:'<code>varA = nil</code> — varA không còn giữ reference.', cls:'gc'},
+                {icon:'✓',  text:'<code>varA = nil</code> - varA không còn giữ reference.', cls:'gc'},
                 {icon:'🛡', text:'<code>varB</code> vẫn tham chiếu → GC <strong>giữ nguyên</strong> object. Nhấn "Chạy GC" để xác nhận.', cls:'gc'}
             ]);
         } else {
             note(true, 'hr-gn-warn', 'Chờ GC',
                 'Ref count = 0. Không ai tham chiếu nữa → object sẽ bị thu hồi lần tới GC chạy. Nhấn "Chạy GC".');
             setLog('warn', [
-                {icon:'🟡', text:'<code>varA = nil</code> — ref count giảm về 0.', cls:'warn'},
+                {icon:'🟡', text:'<code>varA = nil</code> - ref count giảm về 0.', cls:'warn'},
                 {icon:'⏳', text:'Object vẫn còn trên heap cho đến khi GC chạy. Nhấn "Chạy GC".', cls:'warn'}
             ]);
         }
@@ -1095,24 +1095,24 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
         refreshNilBtns();
 
         if (!freed) setHeap(rc === 0 ? 'hr-h-pending' : 'hr-h-protected',
-                            rc === 0 ? 'struct User — chờ GC' : 'struct User');
+                            rc === 0 ? 'struct User - chờ GC' : 'struct User');
 
         document.getElementById('hrStackNote').innerHTML = rc > 0
-            ? '<span class="hr-text-success">varA vẫn tham chiếu — GC sẽ không xóa object.</span>'
+            ? '<span class="hr-text-success">varA vẫn tham chiếu - GC sẽ không xóa object.</span>'
             : 'Không còn biến nào tham chiếu. Sẵn sàng để GC thu hồi.';
 
         if (rc > 0) {
             note(true, '', 'GC đang theo dõi',
-                '<code>varB = nil</code> — varB bỏ tham chiếu.<br><strong>varA vẫn còn</strong> (ref count = ' + rc + ') → GC giữ nguyên object.');
+                '<code>varB = nil</code> - varB bỏ tham chiếu.<br><strong>varA vẫn còn</strong> (ref count = ' + rc + ') → GC giữ nguyên object.');
             setLog('gc', [
-                {icon:'✓',  text:'<code>varB = nil</code> — varB không còn giữ reference.', cls:'gc'},
+                {icon:'✓',  text:'<code>varB = nil</code> - varB không còn giữ reference.', cls:'gc'},
                 {icon:'🛡', text:'<code>varA</code> vẫn tham chiếu → GC <strong>giữ nguyên</strong> object. Nhấn "Chạy GC" để xác nhận.', cls:'gc'}
             ]);
         } else {
             note(true, 'hr-gn-warn', 'Chờ GC',
                 'Ref count = 0. Không ai tham chiếu nữa → object sẽ bị thu hồi lần tới GC chạy. Nhấn "Chạy GC".');
             setLog('warn', [
-                {icon:'🟡', text:'<code>varB = nil</code> — ref count giảm về 0.', cls:'warn'},
+                {icon:'🟡', text:'<code>varB = nil</code> - ref count giảm về 0.', cls:'warn'},
                 {icon:'⏳', text:'Object vẫn còn trên heap cho đến khi GC chạy. Nhấn "Chạy GC".', cls:'warn'}
             ]);
         }
@@ -1125,7 +1125,7 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
             var refs = [];
             if (!nilA) refs.push('<code>varA</code>');
             if (!nilB) refs.push('<code>varB</code>');
-            note(true, 'hr-gn-skip', 'GC chạy xong — không xóa',
+            note(true, 'hr-gn-skip', 'GC chạy xong - không xóa',
                 refs.join(' và ') + ' vẫn còn tham chiếu (ref count = ' + rc + ') → GC <strong>bỏ qua</strong> object này.');
             setLog('gc', [
                 {icon:'🔍', text:'GC quét heap... phát hiện ' + refs.join(' và ') + ' vẫn trỏ đến <code>0xC0001</code>.', cls:'gc'},
@@ -1137,12 +1137,12 @@ Lưu ý `ref count` chỉ dùng để trực quan hóa.
         } else {
             freed = true;
             setHeap('hr-h-freed', 'struct User');
-            note(true, 'hr-gn-done', 'GC hoàn tất — đã thu hồi',
+            note(true, 'hr-gn-done', 'GC hoàn tất - đã thu hồi',
                 'Ref count = 0. Không còn ai tham chiếu → GC giải phóng <code>0xC0001</code> và trả bộ nhớ cho allocator.');
             document.getElementById('hrStackNote').innerHTML =
                 '<span class="hr-text-muted">Vùng nhớ đã được thu hồi an toàn.</span>';
             setLog('ok', [
-                {icon:'🔍', text:'GC quét heap... <code>0xC0001</code> — ref count = 0, không ai tham chiếu.', cls:'gc'},
+                {icon:'🔍', text:'GC quét heap... <code>0xC0001</code> - ref count = 0, không ai tham chiếu.', cls:'gc'},
                 {icon:'♻️', text:'Vùng nhớ thu hồi <strong>an toàn</strong>. Không dangling pointer, không undefined behavior.', cls:'gc'}
             ]);
         }
@@ -1743,19 +1743,19 @@ Nếu bạn đọc muốn hiểu rõ hơn về cơ chế chia cũng như cấp p
       title: 'Arena',
       badge: '64 MB · OS-level',
       color: '#FF8C42',
-      html: '<p>Runtime yêu cầu OS cấp phát bộ nhớ theo từng khối lớn gọi là <b>Arena</b>. Trên hầu hết hệ thống 64-bit, mỗi arena có kích thước <b>64 MB</b>.</p><p><b>Cơ chế 3 bước — chi phí tăng dần:</b></p><ul><li><b>Reserve</b> — đặt chỗ 64 MB address space. Không tốn RAM vật lý.</li><li><b>Commit</b> — báo OS dùng từng vùng ~4 MB khi cần. Mỗi lần = 1 syscall.</li><li><b>Fault-in</b> — OS ánh xạ physical page (4 KB) khi chương trình ghi thực sự.</li></ul><p>Các arena <b>không cần liền kề</b> trong address space. Runtime theo dõi qua bản đồ nội bộ (<code>heapArenas</code>).</p><div class="alloc-code">// Kích thước arena theo nền tảng\n64 MB  — Linux/macOS 64-bit\n 4 MB  — Windows, 32-bit\n512 KB — WebAssembly</div>'
+      html: '<p>Runtime yêu cầu OS cấp phát bộ nhớ theo từng khối lớn gọi là <b>Arena</b>. Trên hầu hết hệ thống 64-bit, mỗi arena có kích thước <b>64 MB</b>.</p><p><b>Cơ chế 3 bước - chi phí tăng dần:</b></p><ul><li><b>Reserve</b> - đặt chỗ 64 MB address space. Không tốn RAM vật lý.</li><li><b>Commit</b> - báo OS dùng từng vùng ~4 MB khi cần. Mỗi lần = 1 syscall.</li><li><b>Fault-in</b> - OS ánh xạ physical page (4 KB) khi chương trình ghi thực sự.</li></ul><p>Các arena <b>không cần liền kề</b> trong address space. Runtime theo dõi qua bản đồ nội bộ (<code>heapArenas</code>).</p><div class="alloc-code">// Kích thước arena theo nền tảng\n64 MB  - Linux/macOS 64-bit\n 4 MB  - Windows, 32-bit\n512 KB - WebAssembly</div>'
     },
     page: {
       title: 'Page',
       badge: '8 KB · Go internal',
       color: '#22c55e',
-      html: '<p>Mỗi arena được chia thành <b>8192 page</b>, mỗi page 8 KB. Đây là đơn vị làm việc nội bộ của allocator — <b>không phải</b> OS page (thường 4 KB).</p><ul><li>1 arena = <b>64 MB ÷ 8 KB = 8192 pages</b></li><li>Runtime theo dõi trạng thái mỗi page qua <code>heapBits</code>.</li><li>Page là đơn vị gộp khi tạo Span.</li></ul><div class="alloc-code">Arena (64 MB)\n├─ Page 0    (8 KB)\n├─ Page 1    (8 KB)  ←─ span chiếm N page liên tiếp\n├─ Page 2    (8 KB) ╱\n│   ...\n└─ Page 8191 (8 KB)</div>'
+      html: '<p>Mỗi arena được chia thành <b>8192 page</b>, mỗi page 8 KB. Đây là đơn vị làm việc nội bộ của allocator - <b>không phải</b> OS page (thường 4 KB).</p><ul><li>1 arena = <b>64 MB ÷ 8 KB = 8192 pages</b></li><li>Runtime theo dõi trạng thái mỗi page qua <code>heapBits</code>.</li><li>Page là đơn vị gộp khi tạo Span.</li></ul><div class="alloc-code">Arena (64 MB)\n├─ Page 0    (8 KB)\n├─ Page 1    (8 KB)  ←─ span chiếm N page liên tiếp\n├─ Page 2    (8 KB) ╱\n│   ...\n└─ Page 8191 (8 KB)</div>'
     },
     span: {
       title: 'Span',
       badge: '1–N pages · mSpan',
       color: '#3b82f6',
-      html: '<p>Một <b>Span</b> là tập hợp N page liên tiếp, dành riêng để chứa các object cùng <b>một kích thước duy nhất</b>. Đây là nơi allocator thực sự trao bộ nhớ cho chương trình.</p><p><b>Ví dụ:</b> Span cho object 32 byte = 1 page (8 KB) → 256 slot.</p><div id="alloc-slot-demo"></div><ul><li><b>allocBits</b> — bitmap 1 bit/slot: <code>1</code> = đang dùng, <code>0</code> = trống.</li><li><b>gcmarkBits</b> — GC dùng trong mark phase.</li><li>Metadata: start address, số page, số slot, đã alloc bao nhiêu.</li></ul><p>Tìm slot trống = scan bitmap → cực nhanh. Không cần merge, không fragmentation.</p>',
+      html: '<p>Một <b>Span</b> là tập hợp N page liên tiếp, dành riêng để chứa các object cùng <b>một kích thước duy nhất</b>. Đây là nơi allocator thực sự trao bộ nhớ cho chương trình.</p><p><b>Ví dụ:</b> Span cho object 32 byte = 1 page (8 KB) → 256 slot.</p><div id="alloc-slot-demo"></div><ul><li><b>allocBits</b> - bitmap 1 bit/slot: <code>1</code> = đang dùng, <code>0</code> = trống.</li><li><b>gcmarkBits</b> - GC dùng trong mark phase.</li><li>Metadata: start address, số page, số slot, đã alloc bao nhiêu.</li></ul><p>Tìm slot trống = scan bitmap → cực nhanh. Không cần merge, không fragmentation.</p>',
       afterRender: function() {
         var el = document.getElementById('alloc-slot-demo');
         if (!el) return;
@@ -1778,7 +1778,7 @@ Nếu bạn đọc muốn hiểu rõ hơn về cơ chế chia cũng như cấp p
       title: 'Object Slot',
       badge: 'allocBits · zero-cost free',
       color: '#d946ef',
-      html: '<p>Tầng nhỏ nhất — một <b>slot</b> trong span. Khi code Go alloc một object, runtime chỉ cần:</p><ol style="padding-left:18px;margin:8px 0"><li>Tìm span đúng size class.</li><li>Scan <code>allocBits</code> tìm bit <code>0</code> đầu tiên.</li><li>Flip bit → <code>1</code>. Trả về con trỏ.</li></ol><p><b>Không syscall, không lock toàn cục</b> — mỗi P (processor) có cache span riêng (<code>mcache</code>), cấp phát hoàn toàn local.</p><div class="alloc-code">// Escape analysis quyết định Stack vs Heap\nfunc foo() *MyStruct {\n    s := &MyStruct{} // escapes → Heap slot\n    return s\n}\n\nfunc bar() {\n    s := MyStruct{}  // no escape → Stack\n    _ = s\n}</div><p>Khi GC thu hồi: chỉ cần flip bit <code>allocBits</code> về <code>0</code>. Slot sẵn sàng dùng lại ngay.</p>'
+      html: '<p>Tầng nhỏ nhất - một <b>slot</b> trong span. Khi code Go alloc một object, runtime chỉ cần:</p><ol style="padding-left:18px;margin:8px 0"><li>Tìm span đúng size class.</li><li>Scan <code>allocBits</code> tìm bit <code>0</code> đầu tiên.</li><li>Flip bit → <code>1</code>. Trả về con trỏ.</li></ol><p><b>Không syscall, không lock toàn cục</b> - mỗi P (processor) có cache span riêng (<code>mcache</code>), cấp phát hoàn toàn local.</p><div class="alloc-code">// Escape analysis quyết định Stack vs Heap\nfunc foo() *MyStruct {\n    s := &MyStruct{} // escapes → Heap slot\n    return s\n}\n\nfunc bar() {\n    s := MyStruct{}  // no escape → Stack\n    _ = s\n}</div><p>Khi GC thu hồi: chỉ cần flip bit <code>allocBits</code> về <code>0</code>. Slot sẵn sàng dùng lại ngay.</p>'
     }
   };
 
@@ -2123,7 +2123,7 @@ func CreateBooksOnOneLargeBlock(n int) []*Book {
     <div class="gm-grid" id="gm-grid-a"></div>
     <div class="gm-legend">
       <div class="gm-legend-item gm-li-ptr"><div class="gm-dot"></div> con trỏ pbooks[i]</div>
-      <div class="gm-legend-item gm-li-used"><div class="gm-dot"></div> books[i] — liên tục</div>
+      <div class="gm-legend-item gm-li-used"><div class="gm-dot"></div> books[i] - liên tục</div>
       <div class="gm-legend-item gm-li-free"><div class="gm-dot"></div> chưa dùng</div>
     </div>
   </div>
@@ -2157,7 +2157,7 @@ func CreateBooksOnManySmallBlocks(n int) []*Book {
     <div class="gm-grid" id="gm-grid-b"></div>
     <div class="gm-legend">
       <div class="gm-legend-item gm-li-ptr"><div class="gm-dot"></div> con trỏ books[i]</div>
-      <div class="gm-legend-item gm-li-used"><div class="gm-dot"></div> book — rời rạc</div>
+      <div class="gm-legend-item gm-li-used"><div class="gm-dot"></div> book - rời rạc</div>
       <div class="gm-legend-item gm-li-free"><div class="gm-dot"></div> chưa dùng</div>
     </div>
   </div>
@@ -2800,16 +2800,16 @@ Pool sẽ phù hợp cho các kiểu kiểu dữ liệu mang các tính chất s
         "Biến được lưu vào BSS segment"
       ],
       answer: 1,
-      explanation: "Biến trên <code>stack</code> được <strong>tự động giải phóng</strong> khi thoát khỏi hàm. Đây là lý do stack rẻ hơn heap về chi phí quản lý — không cần GC dọn dẹp."
+      explanation: "Biến trên <code>stack</code> được <strong>tự động giải phóng</strong> khi thoát khỏi hàm. Đây là lý do stack rẻ hơn heap về chi phí quản lý - không cần GC dọn dẹp."
     },
     {
       tag: "Escape Analysis",
       text: "Trong đoạn code sau, biến <code>u</code> sẽ được cấp phát ở đâu?<div class='code-block'>func createUser() *User {\n    u := User{Name: \"Alice\"}\n    return &u\n}</div>",
       options: [
-        "Stack — vì được khai báo trong hàm",
-        "Heap — vì con trỏ được trả ra ngoài",
-        "BSS Segment — vì là struct",
-        "Data Segment — vì có giá trị khởi tạo"
+        "Stack - vì được khai báo trong hàm",
+        "Heap - vì con trỏ được trả ra ngoài",
+        "BSS Segment - vì là struct",
+        "Data Segment - vì có giá trị khởi tạo"
       ],
       answer: 1,
       explanation: "Compiler phân tích thấy <code>&u</code> bị <em>escape</em> ra ngoài phạm vi hàm qua return value. Do đó Go sẽ cấp phát <code>u</code> trên <strong>heap</strong> thay vì stack."
@@ -2818,10 +2818,10 @@ Pool sẽ phù hợp cho các kiểu kiểu dữ liệu mang các tính chất s
       tag: "Block Size Classes",
       text: "Nếu bạn cần cấp phát biến kích thước <strong>24 bytes</strong>, Go thực sự sẽ cấp cho bạn bao nhiêu bytes?",
       options: [
-        "24 bytes — đúng bằng yêu cầu",
-        "32 bytes — block size class gần nhất",
-        "16 bytes — làm tròn xuống",
-        "48 bytes — gộp với block kế tiếp"
+        "24 bytes - đúng bằng yêu cầu",
+        "32 bytes - block size class gần nhất",
+        "16 bytes - làm tròn xuống",
+        "48 bytes - gộp với block kế tiếp"
       ],
       answer: 1,
       explanation: "Go không cấp phát theo đúng kích thước yêu cầu. Các block size classes nhỏ là <strong>8, 16, 32, 48, 64...</strong> bytes. Với 24 bytes, Go sẽ cấp block <strong>32 bytes</strong>, lãng phí <strong>8 bytes</strong>."
@@ -2854,10 +2854,10 @@ Pool sẽ phù hợp cho các kiểu kiểu dữ liệu mang các tính chất s
       tag: "Strings Builder",
       text: "Đoạn code <code>string(s) + string(s)</code> trong Go thực hiện bao nhiêu lần cấp phát bộ nhớ?",
       options: [
-        "1 lần — kết quả cuối cùng",
-        "2 lần — mỗi string(s) một lần",
-        "3 lần — hai string tạm + kết quả phép cộng",
-        "0 lần — Go tối ưu bằng SSO"
+        "1 lần - kết quả cuối cùng",
+        "2 lần - mỗi string(s) một lần",
+        "3 lần - hai string tạm + kết quả phép cộng",
+        "0 lần - Go tối ưu bằng SSO"
       ],
       answer: 2,
       explanation: "Có <strong>3 lần cấp phát</strong>: mỗi <code>string(s)</code> tạo ra một string tạm, rồi phép <code>+</code> tạo thêm vùng nhớ mới cho kết quả."
@@ -2867,8 +2867,8 @@ Pool sẽ phù hợp cho các kiểu kiểu dữ liệu mang các tính chất s
       text: "Khi dùng <code>make([]int, size, capacity)</code>, tham số nào quan trọng nhất để giảm memory allocation?",
       options: [
         "Kiểu dữ liệu int",
-        "size — kích thước hiện tại",
-        "capacity — sức chứa tối đa",
+        "size - kích thước hiện tại",
+        "capacity - sức chứa tối đa",
         "Cả size và capacity đều quan trọng như nhau"
       ],
       answer: 2,

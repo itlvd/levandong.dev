@@ -75,12 +75,12 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
   line-height: 1.5;
   text-align: left;
 
-  /* ── Semantic colors (FIXED — không đổi theo theme) ── */
-  --mav-accent:  #2563eb;  /* blue   — CPU / primary */
-  --mav-success: #15803d;  /* green  — aligned / ok */
-  --mav-danger:  #dc2626;  /* red    — unaligned / warn */
-  --mav-warning: #d97706;  /* amber  — highlight cell */
-  --mav-info:    #0891b2;  /* cyan   — types trong Go */
+  /* ── Semantic colors (FIXED - không đổi theo theme) ── */
+  --mav-accent:  #2563eb;  /* blue   - CPU / primary */
+  --mav-success: #15803d;  /* green  - aligned / ok */
+  --mav-danger:  #dc2626;  /* red    - unaligned / warn */
+  --mav-warning: #d97706;  /* amber  - highlight cell */
+  --mav-info:    #0891b2;  /* cyan   - types trong Go */
 
   /* ── Theme-adaptive neutrals (phái sinh từ currentColor) ── */
   --mav-text-muted:    color-mix(in srgb, currentColor 62%, transparent);
@@ -293,7 +293,7 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
   line-height: 1; z-index: 1;
 }
 
-/* Cell variants — semantic tints, adaptive theo theme */
+/* Cell variants - semantic tints, adaptive theo theme */
 .mav-c-char {
   background: color-mix(in srgb, var(--mav-accent) 14%, transparent);
   color: var(--mav-accent);
@@ -328,7 +328,7 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
   display: block;
   color: inherit;
   font-weight: 700;
-  opacity: 1.4; /* ineffective but harmless — visual via font-weight */
+  opacity: 1.4; /* ineffective but harmless - visual via font-weight */
 }
 
 /* ── Bottom panel ── */
@@ -355,7 +355,7 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
   color: var(--mav-text-muted);
 }
 
-/* Go syntax — dùng semantic colors để work cả 2 theme */
+/* Go syntax - dùng semantic colors để work cả 2 theme */
 .mav-code {
   font-family: var(--mav-mono);
   color: inherit;
@@ -408,7 +408,7 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
 .mav-text-dn  { color: var(--mav-danger);  font-weight: 700; }
 .mav-text-ok  { color: var(--mav-success); font-weight: 700; }
 
-/* Scrollbars — adaptive */
+/* Scrollbars - adaptive */
 .mav-logs::-webkit-scrollbar,
 .mav-code::-webkit-scrollbar { width: 4px; height: 4px; }
 .mav-logs::-webkit-scrollbar-track,
@@ -649,18 +649,18 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
 
   /* ── Animation steps ── */
   var STEPS_UN = [
-    function () { log('Đọc <strong class="mav-text-dn">B int32</strong> tại offset 1 — bị lệch lề…'); adv(1, 600); },
+    function () { log('Đọc <strong class="mav-text-dn">B int32</strong> tại offset 1 - bị lệch lề…'); adv(1, 600); },
     function () { log('<span class="mav-tcy">Chu kỳ 1:</span> CPU fetch Khối 1 (bytes 0–3) qua Data Bus…'); adv(2, DELAY); },
     function () { log('Tách & buffer tạm <strong>3 bytes</strong> đầu của B[0..2].'); adv(3, DELAY); },
     function () { log('<span class="mav-tcy">Chu kỳ 2:</span> CPU fetch Khối 2 (bytes 4–7) qua Data Bus…'); adv(4, DELAY); },
     function () { log('Lấy thêm <strong>1 byte</strong> cuối B[3].'); adv(5, DELAY); },
-    function () { log('Shift + mask ghép 2 mảnh → <span class="mav-tw">2 chu kỳ — chậm gấp đôi! ⚠</span>'); done(); }
+    function () { log('Shift + mask ghép 2 mảnh → <span class="mav-tw">2 chu kỳ - chậm gấp đôi! ⚠</span>'); done(); }
   ];
 
   var STEPS_AL = [
-    function () { log('Đọc <strong class="mav-text-ok">B int32</strong> tại offset 4 — đã căn lề ✓'); adv(1, 600); },
+    function () { log('Đọc <strong class="mav-text-ok">B int32</strong> tại offset 4 - đã căn lề ✓'); adv(1, 600); },
     function () { log('<span class="mav-tcy">Chu kỳ 1:</span> CPU fetch Khối 2 (bytes 4–7) qua Data Bus…'); adv(2, DELAY); },
-    function () { log('Lấy trọn 4 bytes trong 1 lần → <span class="mav-tok">1 chu kỳ — tối ưu! ✓</span>'); done(); }
+    function () { log('Lấy trọn 4 bytes trong 1 lần → <span class="mav-tok">1 chu kỳ - tối ưu! ✓</span>'); done(); }
   ];
 
   function runStep() {

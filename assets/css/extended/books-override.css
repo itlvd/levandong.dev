@@ -92,6 +92,13 @@
   overflow: hidden;
 }
 
+.book-card-status {
+  align-self: flex-start;
+  margin-bottom: 0.15rem;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+}
+
 /* Single book page */
 .book-single {
   width: 100%;
