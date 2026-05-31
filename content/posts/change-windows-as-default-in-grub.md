@@ -36,7 +36,9 @@ Bạn chỉ cần chú ý tới 2 thông số là `GRUB_DEFAULT` và `GRUB_TIMEO
 
 Bạn có thể thay đổi thứ tự thành `2` để setup Windows là hệ điều hành mặc định. Khi bạn khởi động máy tính, các bạn thấy Windows item nó nằm ở dòng thứ mấy thì các bạn điền vào, tuy nhiên, dòng đầu tiên sẽ bắt đầu từ 0.
 
-**💡 Nếu như bạn không muốn setup 1 hệ điều hành mặc định liên tục mà muốn nó nhớ hệ điều hành cuối cùng mà bạn sử dụng, các bạn có thể setup như sau:**
+{{< callout >}}
+Nếu như bạn không muốn setup 1 hệ điều hành mặc định liên tục mà muốn nó nhớ hệ điều hành cuối cùng mà bạn sử dụng, các bạn có thể setup như sau:
+{{< /callout >}}
 
 > GRUB_DEFAULT=saved
 

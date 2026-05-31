@@ -601,7 +601,9 @@ Khi một biến được lưu trên **stack**, nó sẽ được tự động g
 
 Khi ở **heap**, vấn đề dọn dẹp bắt đầu khó khăn hơn. Vùng nhớ ở **heap** có thể sẽ được tham chiếu bởi các biến khác nhau, ta có thể giải phóng vùng nhớ **heap** của biến `varA`, nhưng biến `varB` vẫn còn sử dụng vùng nhớ đó thì sao? Khi nào thì dọn dẹp? Lúc đó, GC sẽ là cứu tinh của ta.
 
-> ⚠️ Lưu ý `ref count` chỉ dùng để trực quan hóa.
+{{< callout type="warning" >}}
+Lưu ý `ref count` chỉ dùng để trực quan hóa.
+{{< /callout >}}
 
 {{< rawhtml >}}
 <style>
@@ -1276,7 +1278,9 @@ Có một sự thật rằng, trong phần lớn trường hợp, chi phí việ
 
 Dù sao thì **stack** cũng sẽ được tự động dọn dẹp sau khi thoát hàm. Còn trên **heap** thì nó chỉ bị dọn dẹp khi không có 1 vùng nhớ nào đang tham chiếu vào nó nữa, và công việc dọn dẹp đó là việc của GC.
 
-> 💡 Do đó, nếu ta sinh ra quá nhiều bộ nhớ trên **heap** mà không có mục đích dùng lâu dài trong chương trình, thì sẽ gây áp lực lên GC để dọn dẹp trên **heap**.
+{{< callout >}}
+Do đó, nếu ta sinh ra quá nhiều bộ nhớ trên **heap** mà không có mục đích dùng lâu dài trong chương trình, thì sẽ gây áp lực lên GC để dọn dẹp trên **heap**.
+{{< /callout >}}
 
 ## Escape Analysis hoạt động như thế nào?
 
@@ -1313,9 +1317,13 @@ Do đó, nếu bạn yêu cầu cấp vùng nhớ cho biến có kích thước 
 
 Vậy khi bạn yêu cầu cấp vùng nhớ có slice có kích thước 32769 phần tử (`> 32 KB`), Go sẽ cấp cho bạn vùng nhớ (32768 + 8192, tương đương là 5 pages). Vì vậy, bạn đang lãng phí mất 8191 bytes bộ nhớ rồi.
 
-> 💡 Đọc thêm bài [Memory Alignment là gì?](/memory-alignment/) để biết thêm cách tránh lãng phí bộ nhớ trong Golang.
+{{< callout >}}
+Đọc thêm bài [Memory Alignment là gì?](/memory-alignment/) để biết thêm cách tránh lãng phí bộ nhớ trong Golang.
+{{< /callout >}}
 
-> ✍️ Nếu bạn đọc muốn hiểu rõ hơn về cơ chế chia cũng như cấp phát, bạn đọc có thể đọc bài [Understanding the Go Runtime: The Memory Allocator](https://internals-for-interns.com/posts/go-memory-allocator/). Tôi sẽ không đi sâu đến phần thiết kế bên dưới của Go vì không phải mục đích tôi muốn nói đến ở đây. Bên dưới tôi sẽ vẽ một bản tóm tắt.
+{{< callout type="note" >}}
+Nếu bạn đọc muốn hiểu rõ hơn về cơ chế chia cũng như cấp phát, bạn đọc có thể đọc bài [Understanding the Go Runtime: The Memory Allocator](https://internals-for-interns.com/posts/go-memory-allocator/). Tôi sẽ không đi sâu đến phần thiết kế bên dưới của Go vì không phải mục đích tôi muốn nói đến ở đây. Bên dưới tôi sẽ vẽ một bản tóm tắt.
+{{< /callout >}}
 
 {{< rawhtml >}}
 <style>
@@ -1832,7 +1840,9 @@ Ta có 2 string tạm, và GC sẽ phải dọn dẹp nó, với một phép n�
 
 Một phép cộng chuỗi, thì rác sẽ không nhiều, nhưng việc gì xảy ra nếu nó nằm trong một vòng `for`? Hay nằm trong request được query nhiều liên tục?
 
-> 💡 Thay vì sử dụng phép cộng chuỗi, ta có thể dùng strings.Builder để giảm allocation trong Go.
+{{< callout >}}
+Thay vì sử dụng phép cộng chuỗi, ta có thể dùng strings.Builder để giảm allocation trong Go.
+{{< /callout >}}
 
 ### Tối ưu slice
 

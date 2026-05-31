@@ -1,0 +1,9 @@
+{{- $type := .Get "type" | default "tip" -}}
+{{- $icons := dict "tip" "💡" "note" "✍️" "warning" "⚠️" -}}
+{{- $icon := index $icons $type | default "💡" -}}
+<aside class="callout callout-{{ $type }}" role="note">
+  <div class="callout-icon" aria-hidden="true">{{ $icon }}</div>
+  <div class="callout-body">
+    {{ .Inner | markdownify }}
+  </div>
+</aside>

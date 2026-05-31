@@ -10,7 +10,9 @@ Ghost đã không còn support SQLite trên production nữa. Bạn cần phải
 
 Nhắc đến thì đây là một nỗi buồn của tôi 🥲. Vào một ngày đẹp trời, với việc nhầm lẫn không cần thiết của mình, tôi đã nhấn nút xoá đi trang blog mà tôi đã chạy bao năm. Bùm, tất cả bài viết của tôi đã không còn nữa. Một nỗi tiếc nuối không thể tả, tôi đã viết khá nhiều bài viết trong khoảng thời gian dài và không có sao lưu dữ liệu cho nên không thể khôi phục lại được nữa. Nỗi đau cùng sự tiếc nuối của mình, tôi xin hứa sẽ không để chuyện đó xảy ra nữa. Cho nên bài viết này ra đời.
 
-> 💡 **Lưu ý**: Hướng dẫn này chỉ phù hợp cho các bạn nào sử dụng SQLite3 cho Ghost CMS. Các bạn sử dụng SQL khác thì ở bước tạo file script sẽ khác một chút.
+{{< callout >}}
+**Lưu ý**: Hướng dẫn này chỉ phù hợp cho các bạn nào sử dụng SQLite3 cho Ghost CMS. Các bạn sử dụng SQL khác thì ở bước tạo file script sẽ khác một chút.
+{{< /callout >}}
 
 ## Cài đặt Rclone
 

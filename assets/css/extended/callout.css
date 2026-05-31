@@ -1,0 +1,81 @@
+:root {
+  --callout-tip-bg: #fff6d6;
+  --callout-tip-border: #e8c84a;
+  --callout-tip-accent: #9a7b0a;
+  --callout-note-bg: #e8f0fc;
+  --callout-note-border: #8eb4e8;
+  --callout-note-accent: #2f5f9e;
+  --callout-warning-bg: #fff0e0;
+  --callout-warning-border: #f0b878;
+  --callout-warning-accent: #d97706;
+}
+
+.dark {
+  --callout-tip-bg: #3d3520;
+  --callout-tip-border: #8a7530;
+  --callout-tip-accent: #e8c84a;
+  --callout-note-bg: #243044;
+  --callout-note-border: #4a6a9a;
+  --callout-note-accent: #8eb4e8;
+  --callout-warning-bg: #3d2e1a;
+  --callout-warning-border: #a66b20;
+  --callout-warning-accent: #f0b878;
+}
+
+.post-content .callout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 1.25rem 0;
+  padding: 14px 16px;
+  border-radius: var(--radius, 8px);
+  border: 1px solid var(--callout-border, var(--tertiary));
+  background: var(--callout-bg, var(--code-bg));
+}
+
+.post-content .callout-icon {
+  flex-shrink: 0;
+  font-size: 1.15em;
+  line-height: 1.5;
+}
+
+.post-content .callout-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-content .callout-body > :first-child {
+  margin-top: 0;
+}
+
+.post-content .callout-body > :last-child {
+  margin-bottom: 0;
+}
+
+.post-content .callout-body p,
+.post-content .callout-body ul,
+.post-content .callout-body ol {
+  margin: 0.5em 0;
+}
+
+.post-content .callout-body p:first-child {
+  margin-top: 0;
+}
+
+.post-content .callout-tip {
+  --callout-bg: var(--callout-tip-bg);
+  --callout-border: var(--callout-tip-border);
+  border-inline-start: 4px solid var(--callout-tip-accent);
+}
+
+.post-content .callout-note {
+  --callout-bg: var(--callout-note-bg);
+  --callout-border: var(--callout-note-border);
+  border-inline-start: 4px solid var(--callout-note-accent);
+}
+
+.post-content .callout-warning {
+  --callout-bg: var(--callout-warning-bg);
+  --callout-border: var(--callout-warning-border);
+  border-inline-start: 4px solid var(--callout-warning-accent);
+}

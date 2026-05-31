@@ -38,7 +38,9 @@ Please pay attention to `GRUB_DEFAULT` and `GRUB_TIMEOUT` .
 
 You can change the order to `2` to make Windows is default (sometimes this is a default). You determine the order by rebooting Linux and looking at the order of Windows boot options in Grub boot and start from `0`.
 
-**💡 If you want grub remeber the last choice. You can set:**
+{{< callout >}}
+If you want grub remeber the last choice. You can set:
+{{< /callout >}}
 
 > GRUB_DEFAULT=saved
 

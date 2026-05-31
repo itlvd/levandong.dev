@@ -697,7 +697,9 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
 }());
 </script>
 
-> 💡 Để tận dụng tối đa các lệnh của CPU và đạt được performance tốt nhất, thì địa chỉ (bắt đầu) của các kiểu dữ liệu T sẽ được cấp phát theo một bội số của một số nguyên N. Khi đó, **N được gọi là alignment guarantee của kiểu dữ liệu T**.
+{{< callout >}}
+Để tận dụng tối đa các lệnh của CPU và đạt được performance tốt nhất, thì địa chỉ (bắt đầu) của các kiểu dữ liệu T sẽ được cấp phát theo một bội số của một số nguyên N. Khi đó, **N được gọi là alignment guarantee của kiểu dữ liệu T**.
+{{< /callout >}}
 
 ## Alignment guarantee
 
@@ -705,7 +707,9 @@ Do đó, các ngôn ngữ sẽ tự thêm các bytes trống để làm sao khi 
 
 Nói đơn giản, alignment guarantee cho biết: một giá trị của type này nên bắt đầu ở địa chỉ bộ nhớ nào.
 
-> 💡 Trong Go, alignment có thể được kiểm tra bằng `unsafe.Alignof(...)`.
+{{< callout >}}
+Trong Go, alignment có thể được kiểm tra bằng `unsafe.Alignof(...)`.
+{{< /callout >}}
 
 Với kiểu dữ liệu cơ bản như `int, byte, float,...` thì alignment guarantee thường phụ thuộc vào kiến trúc máy tính như 64 bit hoặc 32 bit. Đa số là trùng với size của kiểu dữ liệu.
 
@@ -728,7 +732,9 @@ Go cũng có đưa ra một số [đặc tả](https://go.dev/ref/spec#Size_and_
 - For a variable `x` of struct type: `unsafe.Alignof(x)` is the largest of all the values `unsafe.Alignof(x.f)` for each field `f` of `x`, but at least 1.
 - For a variable `x` of array type: `unsafe.Alignof(x)` is the same as the alignment of a variable of the array's element type.
 
-> 💡 Do đó, với struct thì alignment guarantee là alignment guarantee của field lớn nhất, nếu không có thì bằng 1.
+{{< callout >}}
+Do đó, với struct thì alignment guarantee là alignment guarantee của field lớn nhất, nếu không có thì bằng 1.
+{{< /callout >}}
 
 ## Thực nghiệm
 
@@ -771,7 +777,9 @@ Việc ta không để ý tới memory alignment có thể dẫn đến một s�
 - Application chạy tốn RAM hơn. Vì phải padding nhiều hơn để có được vị trí đẹp.
 - Ít phần tử fit vào cache line hơn.
 
-> 💡 Sắp xếp field từ lớn đến nhỏ thường giúp giảm padding, nhưng đó là heuristic chứ không phải luật tuyệt đối, vẫn cần cân bằng với readability và access pattern.
+{{< callout >}}
+Sắp xếp field từ lớn đến nhỏ thường giúp giảm padding, nhưng đó là heuristic chứ không phải luật tuyệt đối, vẫn cần cân bằng với readability và access pattern.
+{{< /callout >}}
 
 ## Tham khảo
 
