@@ -7,20 +7,35 @@
 - id: footer_archive
   translation: "Archive"
 
+- id: books_all
+  translation: "All books"
+
+- id: books_want_to_read
+  translation: "Want to read"
+
+- id: books_want_to_read_section
+  translation: "Want to read"
+
 - id: books_reading
-  translation: "Currently Reading"
+  translation: "Currently reading"
 
 - id: books_read
+  translation: "Finished"
+
+- id: books_read_section
   translation: "Read"
 
 - id: books_author
   translation: "Author"
 
-- id: books_status
-  translation: "Status"
-
 - id: books_rating
   translation: "Rating"
+
+- id: books_read_date
+  translation: "Date read"
+
+- id: books_date_format
+  translation: "Jan 2, 2006"
 
 - id: subscribe_button
   translation: "Subscribe"

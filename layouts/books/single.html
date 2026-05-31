@@ -1,58 +1,66 @@
 {{- define "main" }}
 
-<article class="post-single">
-  <header class="post-header">
-    {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title">{{ .Title }}</h1>
-    {{- if not (.Param "hideMeta") }}
-    <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
-      {{- partial "translation_list.html" . -}}
+<article class="book-single">
+  <a class="book-back" href="{{ .Parent.Permalink }}">← {{ i18n "books_all" }}</a>
+
+  <div class="book-single-hero">
+    {{- if .Params.bookCover }}
+    <div class="book-single-cover">
+      <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" loading="lazy">
     </div>
     {{- end }}
-  </header>
 
-  {{- if .Params.bookCover }}
-  <div class="book-single-cover">
-    <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" loading="lazy">
-  </div>
-  {{- end }}
-
-  <div class="book-single-meta">
-    {{- if .Params.bookAuthor }}
-    <p><strong>{{ i18n "books_author" }}:</strong> {{ .Params.bookAuthor }}</p>
-    {{- end }}
-    {{- if .Params.status }}
-    <p><strong>{{ i18n "books_status" }}:</strong>
-      {{- if eq .Params.status "reading" }} 📖 {{ i18n "books_reading" }}
-      {{- else if eq .Params.status "read" }} ✅ {{ i18n "books_read" }}
+    <div class="book-single-details">
+      {{- if .Params.status }}
+      <span class="book-status-badge book-status-{{ .Params.status }}">
+        {{- partial "book_status_label.html" .Params.status }}
+      </span>
       {{- end }}
-    </p>
-    {{- end }}
-    {{- if .Params.rating }}
-    <p><strong>{{ i18n "books_rating" }}:</strong> {{ .Params.rating }}/5 ⭐</p>
-    {{- end }}
+
+      <h1 class="book-single-title">{{ .Title }}</h1>
+
+      <dl class="book-meta-list">
+        {{- if .Params.bookAuthor }}
+        <dt>{{ i18n "books_author" }}</dt>
+        <dd>{{ .Params.bookAuthor }}</dd>
+        {{- end }}
+        {{- if .Params.rating }}
+        <dt>{{ i18n "books_rating" }}</dt>
+        <dd class="book-rating-stars" aria-label="{{ .Params.rating }}/5">
+          {{- $rating := int .Params.rating }}
+          {{- range seq 5 }}
+          {{- if le . $rating }}<span class="star-filled">★</span>{{- else }}<span class="star-empty">★</span>{{- end }}
+          {{- end }}
+        </dd>
+        {{- end }}
+        {{- if not .Date.IsZero }}
+        <dt>{{ i18n "books_read_date" }}</dt>
+        <dd>{{ .Date | time.Format (i18n "books_date_format") }}</dd>
+        {{- end }}
+      </dl>
+
+      {{- if .Description }}
+      <p class="book-summary">{{ .Description }}</p>
+      {{- end }}
+
+      {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+      {{- with ($.GetTerms $tags) }}
+      <div class="book-tags">
+        {{- range . }}
+        <a class="book-tag" href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
   </div>
 
   {{- if .Content }}
-  <div class="post-content">
+  <div class="post-content book-single-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
   </div>
   {{- end }}
-
-  <footer class="post-footer">
-    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms $tags) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
-    {{- if (.Param "ShowPostNavLinks") }}
-    {{- partial "post_nav_links.html" . }}
-    {{- end }}
-  </footer>
 
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}

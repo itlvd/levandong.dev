@@ -7,20 +7,35 @@
 - id: footer_archive
   translation: "Danh sách bài viết"
 
+- id: books_all
+  translation: "Tất cả sách"
+
+- id: books_want_to_read
+  translation: "Muốn đọc"
+
+- id: books_want_to_read_section
+  translation: "Muốn đọc"
+
 - id: books_reading
   translation: "Đang đọc"
 
 - id: books_read
+  translation: "Đã đọc xong"
+
+- id: books_read_section
   translation: "Đã đọc"
 
 - id: books_author
   translation: "Tác giả"
 
-- id: books_status
-  translation: "Trạng thái"
-
 - id: books_rating
   translation: "Đánh giá"
+
+- id: books_read_date
+  translation: "Ngày đọc"
+
+- id: books_date_format
+  translation: "2 thg 1, 2006"
 
 - id: subscribe_button
   translation: "Đăng ký?"

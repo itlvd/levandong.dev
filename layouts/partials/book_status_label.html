@@ -1,0 +1,4 @@
+{{- if eq . "want-to-read" }}{{ i18n "books_want_to_read" }}
+{{- else if eq . "reading" }}{{ i18n "books_reading" }}
+{{- else if eq . "read" }}{{ i18n "books_read" }}
+{{- end }}
