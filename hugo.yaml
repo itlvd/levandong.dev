@@ -175,6 +175,9 @@ languages:
           name: Sách
           url: /books/
           weight: 5
+    copyright: |
+      <a href='/privacy'>Quyền riêng tư</a> •
+      <a href='/archive'>Danh sách bài viết</a>
   en:
     languageName: ":us:"
     languageCode: en
@@ -205,6 +208,9 @@ languages:
           name: Books
           url: /en/books/
           weight: 5
+    copyright: |
+      <a href='/en/privacy'>Privacy</a> •
+      <a href='/en/archive'>Post</a>
     params:
       homeInfoParams:
         Title: Hi! <a href="/index.xml" title="RSS" aria-label="RSS"> <svg
@@ -258,7 +264,3 @@ security:
     getenv:
       - "^HUGO_"
 
-copyright: "
-  <a href='/privacy'>privacy</a> •
-  <a href='/archive'>archive</a>
-  "
