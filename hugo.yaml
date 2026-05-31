@@ -72,7 +72,7 @@ params:
 
   label:
     # text: "Home"
-    icon: https://levandong.dev/images/logo.png
+    icon: https://blog.levandong.dev/images/logo.png
     iconHeight: 50
 
   # profile-mode
@@ -80,7 +80,7 @@ params:
     enabled: false # needs to be explicitly set
     title: ExampleSite
     subtitle: "This is subtitle"
-    imageUrl: "https://levandong.dev/images/logo.png"
+    imageUrl: "https://blog.levandong.dev/images/logo.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
