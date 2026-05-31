@@ -1,3 +1,15 @@
+- id: home_posts_section
+  translation: "Bài viết"
+
+- id: home_books_section
+  translation: "Sách"
+
+- id: home_view_all_posts
+  translation: "Xem tất cả bài viết"
+
+- id: home_view_all_books
+  translation: "Xem tất cả sách"
+
 - id: translations
   translation: "Bản dịch"
 

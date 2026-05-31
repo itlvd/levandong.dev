@@ -1,0 +1,49 @@
+/* ===== Home page: Posts & Books sections ===== */
+.home-section {
+    margin-top: calc(var(--gap) * 1.5);
+}
+
+.home-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--gap);
+    margin-bottom: var(--gap);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.home-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.home-section-link {
+    font-size: 14px;
+    color: var(--secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.home-section-link:hover {
+    color: var(--primary);
+}
+
+.home-books-grid {
+    margin-top: 0;
+}
+
+.home-posts-section .post-entry .entry-header h3 {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .home-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}

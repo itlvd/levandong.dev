@@ -1,3 +1,15 @@
+- id: home_posts_section
+  translation: "Posts"
+
+- id: home_books_section
+  translation: "Books"
+
+- id: home_view_all_posts
+  translation: "View all posts"
+
+- id: home_view_all_books
+  translation: "View all books"
+
 - id: translations
   translation: "Translations"
 
