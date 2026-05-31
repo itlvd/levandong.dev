@@ -2,6 +2,8 @@
 title: "Home"
 ---
 
-In the volatile city of data, there’s a Backend coder who’s spent three years "grinding" through everything from Payments to Streaming. A hawk who loathes the "iron cage" of Windows, he ditched the .NET gang to go rogue and join the Golang empire.
+This blog was primarily created as a place for me to record what I've learned. However, if the posts here can also be of help to you, that would make me very happy.
 
-Though the new crew is short on gear, he’s busy forging his own "heavy artillery" to dominate the system. But that’s not enough; he still haunts tech teahouses, hunting for more lethal tricks to truly rule this realm. Any brother willing to ride or die, leave your mark in the form below.
+The content on this blog will focus on exploring the essence of problems, boosting productivity, and creating as much leverage as possible. From the book *The Effective Engineer*, I learned that effectiveness comes not only from improving personal skills, but also from choosing high-leverage activities. For me, sharing knowledge is one of those activities, as it helps me organize what I've learned, and can also support others in their growth.
+
+I hope this will be a valuable reference source for you.
