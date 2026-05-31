@@ -62,11 +62,11 @@ params:
   tocopen: false
 
   assets:
-    favicon: "https://levandong.dev/images/favicon.ico"
-    favicon16x16: "https://levandong.dev/images/favicon-16x16.png"
-    favicon32x32: "https://levandong.dev/images/favicon-32x32.png"
-    apple_touch_icon: "https://levandong.dev/images/apple-icon.png"
-    safari_pinned_tab: "https://levandong.dev/images/apple-icon.png"
+    favicon: "https://blog.levandong.dev/images/favicon.ico"
+    favicon16x16: "https://blog.levandong.dev/images/favicon-16x16.png"
+    favicon32x32: "https://blog.levandong.dev/images/favicon-32x32.png"
+    apple_touch_icon: "https://blog.levandong.dev/images/apple-icon.png"
+    safari_pinned_tab: "https://blog.levandong.dev/images/apple-icon.png"
     disableFingerprinting: true
     disableHLJS: true
 
