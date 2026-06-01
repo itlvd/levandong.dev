@@ -2,7 +2,7 @@
 author: "Le Van Dong"
 title: "Save data less in database using theory of bit in C#"
 date: "2024-08-06"
-tags: ["C-Sharp", "Tips"]
+tags: ["CSharp", "Tips"]
 categories: ["Programming"]
 ---
 

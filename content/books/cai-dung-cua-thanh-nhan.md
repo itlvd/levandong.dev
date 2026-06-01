@@ -1,9 +1,10 @@
 ---
-title: "Review sách: Cái Dũng Của Thánh Nhân"
+title: "Cái Dũng Của Thánh Nhân"
 date: "2026-03-09"
 description: "Súc tích khí lực, trầm tĩnh."
 bookCover: "https://www.nxbtre.com.vn/Images/Book/nxbtre_full_16252022_032504.jpg"
 bookAuthor: "Thu Giang Nguyễn Duy Cần"
+bookYear: 2022
 status: "read"
 rating: 5
 tags: ["Lifestyle"]

@@ -1,59 +1,60 @@
 {{- define "main" }}
 
-<header class="page-header">
-  <h1>{{ .Title }}</h1>
-  {{- if .Description }}
-  <div class="post-description">{{ .Description }}</div>
-  {{- end }}
-  {{- if .IsTranslated }}
-  <div class="post-meta">
-    {{- i18n "translations" | default "Translations" }}:
-    <ul class="i18n_list">
-      {{- range .Translations }}
-      <li>
-        <a href="{{ .Permalink }}">
-          {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
-          {{- .Language.LanguageName | emojify -}}
-          {{- else }}
-          {{- .Lang | title -}}
-          {{- end -}}
-        </a>
-      </li>
-      {{- end }}
-    </ul>
-  </div>
-  {{- end }}
-</header>
+{{- partial "books_page_hero.html" . }}
 
-{{- $wantToReadPages := where .Pages "Params.status" "want-to-read" }}
-{{- $readingPages := where .Pages "Params.status" "reading" }}
-{{- $readPages := where .Pages "Params.status" "read" }}
+{{- $wantToReadPages := (where .Pages "Params.status" "want-to-read").ByDate.Reverse }}
+{{- $readingPages := (where .Pages "Params.status" "reading").ByDate.Reverse }}
+{{- $readPages := (where .Pages "Params.status" "read").ByDate.Reverse }}
+{{- $pageSize := site.Params.booksLibraryPageSize | default 10 }}
 
 {{- if $wantToReadPages }}
-<h2 class="books-section-title">📚 {{ i18n "books_want_to_read_section" }}</h2>
-<div class="books-grid">
-  {{- range $wantToReadPages }}
-  {{- partial "book_card.html" . }}
-  {{- end }}
-</div>
+<section class="books-section books-want-section" aria-labelledby="books-want-heading">
+  <header class="books-section-header">
+    <h2 id="books-want-heading" class="books-section-title">
+      <svg class="books-section-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+      {{ i18n "books_want_to_read_section" }}
+    </h2>
+  </header>
+  <div class="books-library-grid">
+    {{- range $wantToReadPages }}
+    {{- partial "book_card_compact.html" . }}
+    {{- end }}
+  </div>
+</section>
 {{- end }}
 
 {{- if $readingPages }}
-<h2 class="books-section-title">📖 {{ i18n "books_reading" }}</h2>
-<div class="books-grid">
-  {{- range $readingPages }}
-  {{- partial "book_card.html" . }}
-  {{- end }}
-</div>
+<section class="books-section books-reading-section" aria-labelledby="books-reading-heading">
+  <header class="books-section-header">
+    <h2 id="books-reading-heading" class="books-section-title">
+      <svg class="books-section-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="M8 11h8"/><path d="M8 7h6"/></svg>
+      {{ i18n "books_reading" }}
+    </h2>
+  </header>
+  <div class="books-reading-grid">
+    {{- range $readingPages }}
+    {{- partial "book_card_featured.html" . }}
+    {{- end }}
+  </div>
+</section>
 {{- end }}
 
 {{- if $readPages }}
-<h2 class="books-section-title">✅ {{ i18n "books_read_section" }}</h2>
-<div class="books-grid">
-  {{- range $readPages }}
-  {{- partial "book_card.html" . }}
-  {{- end }}
-</div>
+{{- $paginator := .Paginate $readPages $pageSize }}
+<section class="books-section books-library-section" aria-labelledby="books-library-heading">
+  <header class="books-section-header">
+    <h2 id="books-library-heading" class="books-section-title">
+      <svg class="books-section-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+      {{ i18n "books_library_section" }} ({{ len $readPages }})
+    </h2>
+  </header>
+  <div class="books-library-grid">
+    {{- range $paginator.Pages }}
+    {{- partial "book_card_compact.html" . }}
+    {{- end }}
+  </div>
+  {{- partial "books_pagination.html" $paginator }}
+</section>
 {{- end }}
 
 {{- end }}{{/* end main */}}

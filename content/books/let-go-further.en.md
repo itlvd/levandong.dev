@@ -1,9 +1,10 @@
 ---
-title: "Review book: Let's Go Further"
+title: "Let's Go Further"
 date: "2025-12-20"
 description: "This book will guide you through building a web API with Go."
 bookCover: "https://lets-go-further.alexedwards.net/sample/assets/img/cover.png"
 bookAuthor: "Alex Edwards"
+bookYear: 2024
 status: "read"
 rating: 3
 tags: ["Programming", "Go"]

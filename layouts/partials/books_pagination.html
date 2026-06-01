@@ -1,0 +1,28 @@
+{{- $paginator := . }}
+{{- if gt $paginator.TotalPages 1 }}
+<nav class="books-pagination" aria-label="Book library pagination">
+  {{- if $paginator.HasPrev }}
+  <a class="books-pagination-arrow" href="{{ $paginator.Prev.URL | absURL }}" aria-label="{{ i18n "prev_page" | default "Previous" }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+  </a>
+  {{- else }}
+  <span class="books-pagination-arrow is-disabled" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  </span>
+  {{- end }}
+
+  {{- range $paginator.Pagers }}
+  <a class="books-pagination-num{{ if eq . $paginator }} is-active{{ end }}" href="{{ .URL | absURL }}">{{ .PageNumber }}</a>
+  {{- end }}
+
+  {{- if $paginator.HasNext }}
+  <a class="books-pagination-arrow" href="{{ $paginator.Next.URL | absURL }}" aria-label="{{ i18n "next_page" | default "Next" }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+  </a>
+  {{- else }}
+  <span class="books-pagination-arrow is-disabled" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  </span>
+  {{- end }}
+</nav>
+{{- end }}

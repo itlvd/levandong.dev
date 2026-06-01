@@ -22,6 +22,7 @@ minify:
 params:
   mainSections: ["posts"]
   homeBooksLimit: 3
+  booksLibraryPageSize: 10
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Dong's Notes
   description: "Dong's Notes"

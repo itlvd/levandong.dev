@@ -1,9 +1,10 @@
 ---
-title: "Review sách: Clean Code"
+title: "Clean Code"
 date: "2026-03-07"
 description: "Viết như thế nào cho Clean là một vấn đề gây tranh cãi. Code của bạn đối với bạn có thể clean, nhưng với người khác là code bẩn. Vậy làm sao để có thể code clean hơn?"
 bookCover: "https://m.media-amazon.com/images/I/71nj3JM-igL._SY342_.jpg"
 bookAuthor: "Robert C. Martin"
+bookYear: 2008
 status: "reading"
 rating: 4
 tags: ["Programming"]

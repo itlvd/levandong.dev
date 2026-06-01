@@ -56,10 +56,13 @@
   translation: "Currently reading"
 
 - id: books_read
-  translation: "Finished"
+  translation: "Read"
 
 - id: books_read_section
   translation: "Read"
+
+- id: books_library_section
+  translation: "Book library"
 
 - id: books_author
   translation: "Author"

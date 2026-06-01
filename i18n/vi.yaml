@@ -32,7 +32,7 @@
   translation: "Tôi mong rằng đây sẽ là nguồn tài liệu tham khảo chất lượng với các bạn."
 
 - id: home_quote_author
-  translation: "Le Van Dong"
+  translation: "Lê Văn Đông"
 
 - id: translations
   translation: "Bản dịch"
@@ -56,10 +56,13 @@
   translation: "Đang đọc"
 
 - id: books_read
-  translation: "Đã đọc xong"
+  translation: "Đã đọc"
 
 - id: books_read_section
   translation: "Đã đọc"
+
+- id: books_library_section
+  translation: "Thư viện sách"
 
 - id: books_author
   translation: "Tác giả"

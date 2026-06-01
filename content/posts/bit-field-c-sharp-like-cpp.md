@@ -2,7 +2,7 @@
 author: "Le Van Dong"
 title: "Lưu trữ dữ liệu tốn ít tài nguyên hơn dựa vào bit trong CSharp"
 date: "2024-08-06"
-tags: ["C-Sharp", "Tips"]
+tags: ["CSharp", "Tips"]
 categories: ["Programming"]
 ---
 
