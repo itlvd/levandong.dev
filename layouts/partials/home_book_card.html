@@ -1,0 +1,25 @@
+<a class="book-card book-card--home" href="{{ .Permalink }}">
+  {{- if .Params.bookCover }}
+  <div class="book-cover book-cover--home">
+    <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" loading="lazy">
+  </div>
+  {{- else }}
+  <div class="book-cover book-cover--home book-cover-placeholder">
+    <span>{{ .Title | truncate 40 }}</span>
+  </div>
+  {{- end }}
+  <div class="book-info book-info--home">
+    {{- if .Params.status }}
+    <span class="book-status-badge book-status-{{ .Params.status }} book-card-status">
+      {{- partial "book_status_label.html" .Params.status }}
+    </span>
+    {{- end }}
+    <h3 class="book-title">{{ .Title }}</h3>
+    {{- if .Params.bookAuthor }}
+    <p class="book-author">{{ .Params.bookAuthor }}</p>
+    {{- end }}
+    {{- if .Description }}
+    <p class="book-description">{{ .Description | truncate 100 }}</p>
+    {{- end }}
+  </div>
+</a>

@@ -1,0 +1,68 @@
+.home-quote-section {
+    margin-top: calc(var(--gap) * 2);
+}
+
+.home-quote {
+    position: relative;
+    margin: 0;
+    padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2);
+    background: var(--accent-light);
+    border-radius: var(--radius-lg);
+    border: none;
+    overflow: hidden;
+}
+
+.home-quote-mark {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--accent);
+    opacity: 0.85;
+}
+
+.home-quote-text {
+    margin: 0 0 16px;
+    max-width: 85%;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.home-quote-footer {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.home-quote-leaf {
+    position: absolute;
+    right: 24px;
+    bottom: 16px;
+    color: var(--accent);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.dark .home-quote {
+    background: color-mix(in srgb, var(--accent) 15%, var(--entry));
+}
+
+@media (max-width: 640px) {
+    .home-quote {
+        padding: var(--gap) calc(var(--gap) * 1.25);
+    }
+
+    .home-quote-text {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .home-quote-leaf {
+        width: 56px;
+        height: 56px;
+        right: 12px;
+        bottom: 8px;
+        opacity: 0.25;
+    }
+}

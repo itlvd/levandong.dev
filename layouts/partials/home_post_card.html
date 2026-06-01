@@ -1,0 +1,77 @@
+{{- $index := .index | default 0 -}}
+{{- $tag := "" -}}
+{{- with .page.Params.tags -}}
+  {{- $tag = index . 0 | lower -}}
+{{- end -}}
+
+{{- $icon := .page.Params.homeIcon | default "" -}}
+{{- $bgClass := printf "palette-%d" (mod $index 4) -}}
+
+{{- if .page.Params.homeIconBg -}}
+  {{- $bgClass = "custom" -}}
+{{- else if eq $tag "docker" -}}
+  {{- $bgClass = "docker" -}}
+  {{- $icon = "docker" -}}
+{{- else if or (eq $tag "go") (eq $tag "golang") -}}
+  {{- $bgClass = "go" -}}
+  {{- $icon = "go" -}}
+{{- else if eq $tag "tips" -}}
+  {{- $bgClass = "tips" -}}
+  {{- $icon = "tips" -}}
+{{- else if eq $tag "linux" -}}
+  {{- $bgClass = "linux" -}}
+  {{- $icon = "linux" -}}
+{{- else if eq $tag "firefox" -}}
+  {{- $bgClass = "firefox" -}}
+  {{- $icon = "firefox" -}}
+{{- else if or (eq $tag "csharp") (eq $tag "dotnet") (eq $tag "c#") -}}
+  {{- $bgClass = "csharp" -}}
+  {{- $icon = "csharp" -}}
+{{- else if or (eq $tag "blockchain") (eq $tag "cryptocurrency") -}}
+  {{- $bgClass = "blockchain" -}}
+  {{- $icon = "blockchain" -}}
+{{- else -}}
+  {{- $icon = "link" -}}
+{{- end -}}
+
+<a class="home-post-card" href="{{ .page.Permalink }}" aria-label="{{ .page.Title | plainify }}">
+  <div class="home-post-card-icon home-post-card-icon--{{ $bgClass }}"{{ with .page.Params.homeIconBg }} style="--home-icon-bg: {{ . | safeCSS }};"{{ end }}>
+    {{- if eq $icon "docker" -}}
+    <img class="home-post-card-icon-docker" src="/images/docker.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if eq $icon "go" -}}
+    <img class="home-post-card-icon-go" src="/images/go-logo-blue.svg" alt="" width="44" height="39" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if eq $icon "tips" -}}
+    <img class="home-post-card-icon-tips" src="/images/light-bulb.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if eq $icon "linux" -}}
+    <img class="home-post-card-icon-linux" src="/images/linux.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if eq $icon "firefox" -}}
+    <img class="home-post-card-icon-firefox" src="/images/firefox.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if eq $icon "csharp" -}}
+    <img class="home-post-card-icon-csharp" src="/images/csharp.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if eq $icon "blockchain" -}}
+    <img class="home-post-card-icon-blockchain" src="/images/blockchain.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+    {{- else if and .page.Params.homeIcon (ne $icon "link") -}}
+    <span class="home-post-card-emoji">{{ .page.Params.homeIcon }}</span>
+    {{- else -}}
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6b6b8a" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+    {{- end -}}
+  </div>
+
+  <div class="home-post-card-body">
+    <h3 class="home-post-card-title">{{ .page.Title }}</h3>
+    {{- if ne (.page.Param "hideSummary") true }}
+    <p class="home-post-card-summary">{{ .page.Summary | plainify | htmlUnescape }}{{ if .page.Truncated }}...{{ end }}</p>
+    {{- end }}
+    {{- with .page.Params.tags }}
+    <div class="home-post-card-tags">
+      {{- range first 4 . }}
+      <span class="home-post-card-tag">{{ . }}</span>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+
+  {{- if not (.page.Param "hideMeta") }}
+  <time class="home-post-card-date" datetime="{{ .page.Date.Format "2006-01-02" }}">{{ .page.Date.Format site.Params.DateFormat }}</time>
+  {{- end }}
+</a>

@@ -1,5 +1,5 @@
 - id: home_posts_section
-  translation: "Bài viết"
+  translation: "Bài viết mới"
 
 - id: home_books_section
   translation: "Sách"
@@ -9,6 +9,30 @@
 
 - id: home_view_all_books
   translation: "Xem tất cả sách"
+
+- id: home_greeting
+  translation: "Xin chào! 👋"
+
+- id: home_welcome_prefix
+  translation: "Chào mừng bạn đến với"
+
+- id: home_pillar_1
+  translation: "Viết để học"
+
+- id: home_pillar_2
+  translation: "Chia sẻ kiến thức"
+
+- id: home_pillar_3
+  translation: "Cùng nhau phát triển"
+
+- id: home_subscribe_hint
+  translation: "Đăng ký để nhận bài viết mới nhất qua email."
+
+- id: home_quote_text
+  translation: "Tôi mong rằng đây sẽ là nguồn tài liệu tham khảo chất lượng với các bạn."
+
+- id: home_quote_author
+  translation: "Le Van Dong"
 
 - id: translations
   translation: "Bản dịch"
@@ -50,7 +74,7 @@
   translation: "2 thg 1, 2006"
 
 - id: subscribe_button
-  translation: "Đăng ký?"
+  translation: "Đăng ký nhận bài viết"
 
 - id: subscribe_placeholder
   translation: "you@email.com"

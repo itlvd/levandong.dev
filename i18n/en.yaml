@@ -1,5 +1,5 @@
 - id: home_posts_section
-  translation: "Posts"
+  translation: "Latest posts"
 
 - id: home_books_section
   translation: "Books"
@@ -10,6 +10,30 @@
 - id: home_view_all_books
   translation: "View all books"
 
+- id: home_greeting
+  translation: "Hi! 👋"
+
+- id: home_welcome_prefix
+  translation: "Welcome to"
+
+- id: home_pillar_1
+  translation: "Write to learn"
+
+- id: home_pillar_2
+  translation: "Share knowledge"
+
+- id: home_pillar_3
+  translation: "Grow together"
+
+- id: home_subscribe_hint
+  translation: "Subscribe to get the latest posts by email."
+
+- id: home_quote_text
+  translation: "I hope this will be a valuable reference source for you."
+
+- id: home_quote_author
+  translation: "Le Van Dong"
+
 - id: translations
   translation: "Translations"
 
@@ -17,7 +41,7 @@
   translation: "Privacy"
 
 - id: footer_archive
-  translation: "Post"
+  translation: "Archive"
 
 - id: books_all
   translation: "All books"
@@ -50,7 +74,7 @@
   translation: "Jan 2, 2006"
 
 - id: subscribe_button
-  translation: "Subscribe"
+  translation: "Subscribe to posts"
 
 - id: subscribe_placeholder
   translation: "you@email.com"
