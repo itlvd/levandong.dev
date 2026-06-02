@@ -1,4 +1,5 @@
 :root {
+  --font-sans: "Be Vietnam Pro", sans-serif;
   --gap: 20px;
   --content-gap: 20px;
   --header-height: 60px;
