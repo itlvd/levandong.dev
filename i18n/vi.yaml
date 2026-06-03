@@ -40,8 +40,8 @@
 - id: footer_privacy
   translation: "Quyền riêng tư"
 
-- id: footer_archive
-  translation: "Danh sách bài viết"
+- id: footer_license
+  translation: "Bản quyền"
 
 - id: books_all
   translation: "Tất cả sách"

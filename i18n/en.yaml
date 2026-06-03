@@ -40,8 +40,8 @@
 - id: footer_privacy
   translation: "Privacy"
 
-- id: footer_archive
-  translation: "Archive"
+- id: footer_license
+  translation: "Copyright"
 
 - id: books_all
   translation: "All books"
