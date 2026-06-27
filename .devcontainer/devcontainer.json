@@ -6,7 +6,10 @@
       "version": "latest",
       "extended": true
     },
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers-contrib/features/lazygit:1": {
+      "version": "latest"
+    }
   },
   "forwardPorts": [1313],
   "portsAttributes": {
