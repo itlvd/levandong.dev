@@ -5,7 +5,7 @@ description: "How to write code that is clean, easy to understand, and easy to m
 bookCover: "https://m.media-amazon.com/images/I/71nj3JM-igL._SY342_.jpg"
 bookAuthor: "Robert C. Martin"
 bookYear: 2008
-status: "reading"
+status: "read"
 rating: 4
 tags: ["Programming"]
 ShowToc: true

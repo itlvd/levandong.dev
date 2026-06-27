@@ -15,12 +15,15 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "git submodule update --init --recursive",
-  "postStartCommand": {
-    "command": "hugo server --bind 0.0.0.0 --baseURL http://localhost:1313 --liveReloadPort 1313",
-    "isBackground": true
+  "mounts": [
+    "source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": {
+    "submodules": "git submodule update --init --recursive",
+    "neovim": "curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz && sudo tar -C /usr/local -xzf nvim-linux-x86_64.tar.gz --strip-components=1 && rm nvim-linux-x86_64.tar.gz"
+
   },
-  "customizations": {
+"customizations": {
     "vscode": {
       "extensions": ["budparr.language-hugo-vscode"]
     }
