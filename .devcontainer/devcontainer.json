@@ -7,9 +7,7 @@
       "extended": true
     },
     "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers-contrib/features/lazygit:1": {
-      "version": "latest"
-    }
+    "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary:1": {}
   },
   "forwardPorts": [1313],
   "portsAttributes": {
@@ -19,12 +17,19 @@
     }
   },
   "mounts": [
-    "source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached"
+    // Neovim config
+    "source=${localEnv:HOME}/.config/nvim,target=/home/vscode/.config/nvim,type=bind,consistency=cached",
+    
+    // SSH agent socket
+    "source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind",
+
+    // Git config
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+
   ],
   "postCreateCommand": {
     "submodules": "git submodule update --init --recursive",
     "neovim": "curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz && sudo tar -C /usr/local -xzf nvim-linux-x86_64.tar.gz --strip-components=1 && rm nvim-linux-x86_64.tar.gz"
-
   },
 "customizations": {
     "vscode": {

@@ -9,6 +9,11 @@
       "version": "1.1.3",
       "resolved": "ghcr.io/devcontainers/features/hugo@sha256:15465c956810aa164c9644b6df5ca36f6cac3e7a86b7dcc474a1fb830b21c509",
       "integrity": "sha256:15465c956810aa164c9644b6df5ca36f6cac3e7a86b7dcc474a1fb830b21c509"
+    },
+    "ghcr.io/GeorgOfenbeck/features/lazygit-linuxbinary:1": {
+      "version": "1.0.0",
+      "resolved": "ghcr.io/georgofenbeck/features/lazygit-linuxbinary@sha256:5f95752dbaf9a2798039e7cfd09887dca886654899de5c3c257d870c74230523",
+      "integrity": "sha256:5f95752dbaf9a2798039e7cfd09887dca886654899de5c3c257d870c74230523"
     }
   }
 }
