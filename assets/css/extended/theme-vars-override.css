@@ -6,7 +6,7 @@
   --footer-height: 60px;
   --radius: 8px;
   --radius-lg: 16px;
-  --theme: #ffffff;
+  --theme: #f2f1eb;
   --entry: #ffffff;
   --primary: #101010;
   --secondary: #5c5c5c;
@@ -16,7 +16,7 @@
   --accent: #4a7c59;
   --accent-light: #e8f3ec;
   --hljs-bg: #f2f1eb;
-  --code-bg: #f2f1eb;
+  --code-bg: #e7e5e5;
   --secondary-urls: #4a7c59;
 }
 
@@ -32,4 +32,14 @@
     --border: rgb(51, 51, 51);
     --accent: #6b9a78;
     --accent-light: rgba(74, 124, 89, 0.2);
+}
+
+.list {
+    background: var(--theme);
+}
+
+.post-content code:not(pre code),
+.post-single .content code:not(pre code),
+p > code, li > code, td > code {
+    color: var(--accent) !important;
 }
