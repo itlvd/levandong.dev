@@ -5,7 +5,7 @@ description: "Nhập môn triết học Đông phương"
 bookCover: "https://www.nxbtre.com.vn/Images/Book/nxbtre_full_19482021_114800.jpg"
 bookAuthor: "Thu Giang Nguyễn Duy Cần"
 bookYear: 2023
-status: "reading"
+status: "read"
 rating: 4
 tags: ["Philosophy"]
 ShowToc: true
