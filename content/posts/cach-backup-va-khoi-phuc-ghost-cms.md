@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Cách backup và khôi phục Ghost CMS"
 date: "2023-11-15 09:29:48"
+description: "Backup Ghost CMS với Rclone - đừng để mất hết bài viết như tôi."
 tags: ["Linux", "VPS"]
 categories: ["Linux", "Tips"]
 ---

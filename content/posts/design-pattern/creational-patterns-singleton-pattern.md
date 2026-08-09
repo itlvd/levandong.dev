@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Singleton Pattern là gì?"
 date: "2024-09-27 02:19:32"
+description: "Đảm bảo chỉ một instance duy nhất, an toàn trong môi trường đa luồng."
 tags: ["Creational Pattern", "CSharp"]
 categories: ["Programming"]
 ---

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Save data less in database using theory of bit in C#"
 date: "2024-08-06"
+description: "Pack C# structs into bits to store more data with less space."
 tags: ["CSharp", "Tips"]
 categories: ["Programming"]
 ---

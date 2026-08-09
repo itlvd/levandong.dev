@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Go - Interface Satisfaction"
 date: "2025-06-20"
+description: "Go implement interface ngầm định - kiểm tra lúc compile, không đợi runtime."
 tags: ["Go", "Tips"]
 categories: ["Golang", "Programming"]
 ---

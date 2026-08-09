@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Adapter Pattern là gì?"
 date: "2024-11-11"
+description: "Kết nối hai interface không tương thích nhờ Adapter Pattern."
 tags: ["CSharp", "Structural Pattern"]
 categories: ["Programming"]
 ---

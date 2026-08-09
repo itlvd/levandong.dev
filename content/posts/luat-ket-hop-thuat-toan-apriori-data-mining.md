@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Khai thác luật kết hợp với thuật toán Apriori"
 date: "2021-10-20T17:31:25+07:00"
+description: "Khai thác luật kết hợp từ dữ liệu giao dịch bằng thuật toán Apriori."
 tags: ["Data", "Math"]
 categories: ["Machine Learning"]
 math: true

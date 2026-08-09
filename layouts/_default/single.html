@@ -32,8 +32,14 @@
     </div>
     {{- end }}
   </header>
-  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- $hidePageBanner := or (eq .Params.banner false) .Params.cover.hidden -}}
+  {{- if not $hidePageBanner -}}
+    {{- if .Params.cover.image -}}
+      {{- partial "cover.html" (dict "cxt" . "IsHome" false "IsSingle" true "isHidden" false) }}
+    {{- else if in site.Params.mainSections .Type -}}
+      {{- partial "post_banner.html" . }}
+    {{- end -}}
+  {{- end -}}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
   {{- end }}

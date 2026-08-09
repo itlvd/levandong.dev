@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Bit Fields trong C chia nhiều biến chỉ với 1 byte"
 date: "2021-04-12 17:00:00"
+description: "Gói nhiều biến flag vào 1 byte nhờ Bit Fields trong C/C++."
 tags: ["C/C++", "Tips"]
 categories: ["Programming"]
 ---

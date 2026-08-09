@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Extension trong C#?"
 date: "2024-09-24 02:19:32"
+description: "Thêm method vào class có sẵn mà không cần kế thừa, nhờ Extension trong C#."
 tags: ["Dotnet", "CSharp"]
 categories: ["Programming"]
 ---

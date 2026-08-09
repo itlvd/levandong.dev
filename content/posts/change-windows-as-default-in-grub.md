@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Đổi grub boot mặc định"
 date: "2024-03-23 03:21:58"
+description: "Đặt Windows làm hệ điều hành mặc định khi dual boot Linux."
 tags: ["Linux", "Tips"]
 categories: ["Linux", "Tips"]
 ---

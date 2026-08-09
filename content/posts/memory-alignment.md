@@ -2,12 +2,9 @@
 author: "Le Van Dong"
 title: "Memory Alignment là gì?"
 date: "2026-03-18"
-description: "Trong Go, size thực tế của struct không chỉ là tổng size các field. Compiler sẽ chèn padding để bảo đảm memory alignment, nên thứ tự khai báo field có thể làm tổng size thay đổi. Sắp xếp field hợp lý giúp giảm lãng phí bộ nhớ và đôi khi cải thiện hiệu quả cache."
+description: "Thứ tự field quyết định size thực tế của struct - compiler chèn padding để alignment."
 tags: ["Go"]
 categories: ["Golang", "Programming"]
-cover:
-  image: /posts/images/memory-alignment.webp
-  alt: "Memory Alignment là gì?"
 ---
 
 Trong Go, size thực tế của struct không chỉ là tổng size các field. Compiler sẽ chèn padding để bảo đảm memory alignment, nên thứ tự khai báo field có thể làm tổng size thay đổi. Sắp xếp field hợp lý giúp giảm lãng phí bộ nhớ và đôi khi cải thiện hiệu quả cache.

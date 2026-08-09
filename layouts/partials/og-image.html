@@ -1,0 +1,83 @@
+{{- $result := dict "url" "" "width" 0 "height" 0 -}}
+{{- $cfg := site.Params.banner | default dict -}}
+{{- $width := $cfg.width | default 1200 -}}
+{{- $height := $cfg.height | default 630 -}}
+
+{{- if .Params.cover.image -}}
+  {{- $url := "" -}}
+  {{- if ne .Params.cover.relative true -}}
+    {{- $url = .Params.cover.image | absURL -}}
+  {{- else -}}
+    {{- $url = (path.Join .RelPermalink .Params.cover.image) | absURL -}}
+  {{- end -}}
+  {{- $result = dict "url" $url "width" $width "height" $height -}}
+{{- else if and .IsPage (in site.Params.mainSections .Type) -}}
+  {{- $bannerParams := dict -}}
+  {{- if reflect.IsMap .Params.banner -}}
+    {{- $bannerParams = .Params.banner -}}
+  {{- end -}}
+
+  {{- $base := os.Getenv "HUGO_BANNER_BASE_URL" | default $cfg.baseURL | default "http://localhost:8787" -}}
+  {{- $theme := $bannerParams.theme | default $cfg.theme | default "tech" -}}
+  {{- $pattern := $bannerParams.pattern | default $cfg.pattern | default "grid" -}}
+  {{- $watermark := $cfg.watermark | default "levandong.dev" -}}
+
+  {{- $subtitle := "" -}}
+  {{- with $bannerParams.subtitle -}}
+    {{- $subtitle = . -}}
+  {{- else -}}
+    {{- with .Description -}}
+      {{- $subtitle = . | plainify -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $logo := "" -}}
+  {{- with $bannerParams.logo -}}
+    {{- $logo = . -}}
+  {{- else -}}
+    {{- with .Params.tags -}}
+      {{- with index . 0 -}}
+        {{- $tagKey := lower . -}}
+        {{- $mapped := "" -}}
+        {{- range $k, $v := ($cfg.logoMap | default dict) -}}
+          {{- if eq (lower $k) $tagKey -}}
+            {{- $mapped = $v -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if $mapped -}}
+          {{- $logo = $mapped -}}
+        {{- else -}}
+          {{- $logo = $tagKey | replace "/" "" | replace " " "" -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $badge := "" -}}
+  {{- if not .PublishDate.IsZero -}}
+    {{- $badge = .PublishDate.Format (site.Params.DateFormat | default "02/01/2006") -}}
+  {{- end -}}
+
+  {{- $qs := dict
+    "title" .Title
+    "theme" $theme
+    "pattern" $pattern
+    "watermark" $watermark
+    "width" (printf "%d" $width)
+    "height" (printf "%d" $height)
+  -}}
+  {{- with $subtitle -}}
+    {{- $qs = merge $qs (dict "subtitle" .) -}}
+  {{- end -}}
+  {{- with $logo -}}
+    {{- $qs = merge $qs (dict "logo" .) -}}
+  {{- end -}}
+  {{- with $badge -}}
+    {{- $qs = merge $qs (dict "watermarkBadge" .) -}}
+  {{- end -}}
+
+  {{- $url := printf "%s/banner.png?%s" (strings.TrimSuffix "/" $base) (querify $qs) -}}
+  {{- $result = dict "url" $url "width" $width "height" $height -}}
+{{- end -}}
+
+{{- return $result -}}

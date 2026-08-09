@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Tản mạn một chút về hành trình đầu tư"
 date: "2025-06-26"
+description: "Tản mạn về hành trình đầu tư, tiết kiệm và chuẩn bị cho hưu trí."
 tags: ["Finance", "Investment"]
 categories: ["Finance"]
 ---

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Memory lãng phí của map trong Golang"
 date: "2026-06-28"
+description: "Map trong Go không trả RAM sau khi xóa phần tử - hiểu cơ chế để tránh lãng phí."
 tags: ["Go"]
 categories: ["Golang", "Programming"]
 math: true

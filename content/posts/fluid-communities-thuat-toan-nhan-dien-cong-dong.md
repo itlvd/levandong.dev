@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Fluid Communities - Thuật toán nhận diện cộng đồng"
 date: "2022-11-14 02:19:32"
+description: "Nhận diện cộng đồng trên đồ thị: nút thuộc nhóm có trọng số kết nối lớn nhất."
 tags: ["Data", "Graph"]
 categories: ["Machine Learning"]
 ---

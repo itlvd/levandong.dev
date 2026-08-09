@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Abstract Factory là gì"
 date: "2024-11-08 02:19:32"
+description: "Tạo cả họ object liên quan mà không chỉ rõ class cụ thể."
 tags: ["CSharp", "Creational Pattern"]
 categories: ["Programming"]
 ---

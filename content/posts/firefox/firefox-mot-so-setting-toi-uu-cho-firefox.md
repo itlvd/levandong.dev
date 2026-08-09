@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Một số setting tối ưu cho Firefox"
 date: "2024-08-17 01:01:01"
+description: "Một số about:config giúp Firefox nhẹ hơn, riêng tư hơn và tiện hơn."
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
 ---

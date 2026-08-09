@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Hướng dẫn setup Dev Container cho mọi dự án"
 date: "2026-05-23 03:21:58"
+description: "Đồng nhất môi trường phát triển cho cả team, onboard chỉ một cú click."
 tags: ["Docker", "Tips", "Linux"]
 categories: ["Docker", "Tips"]
 ---

@@ -64,6 +64,15 @@ h6:hover .anchor {
   margin: 1rem auto;
 }
 
+.post-single .entry-cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 3px solid var(--code-bg);
+}
+
 /* Add [] to footnote-ref and remove url underline */
 a.footnote-ref {
   box-shadow: none;

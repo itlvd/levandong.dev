@@ -1,0 +1,11 @@
+{{- $og := partial "og-image.html" . -}}
+{{- with $og.url -}}
+<figure class="entry-cover">
+  <img loading="eager"
+    src="{{ . }}"
+    width="{{ $og.width }}"
+    height="{{ $og.height }}"
+    alt="{{ $.Title | plainify }}"
+    class="post-banner">
+</figure>
+{{- end -}}

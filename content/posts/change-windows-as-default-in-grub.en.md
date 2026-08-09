@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Changing default Grub boot options"
 date: "2024-03-23 03:21:58"
+description: "Make Windows the default OS in a Linux dual-boot Grub menu."
 tags: ["Linux", "Tips"]
 categories: ["Linux", "Tips"]
 ---

@@ -120,6 +120,27 @@ params:
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
+  banner:
+    baseURL: "https://cover.levandong.dev" # prod: https://cover.levandong.dev
+    theme: tech
+    pattern: grid
+    watermark: levandong.dev
+    width: 1200
+    height: 630
+    logoMap:
+      csharp: csharp
+      dotnet: dotnet
+      go: go
+      javascript: javascript
+      firefox: firefox
+      docker: docker
+      linux: linux
+      "c/c++": cplusplus
+      blockchain: bitcoin
+      cloudflare: cloudflare
+      data: python
+      finance: dollar
+
   editPost:
     URL: "https://github.com/itlvd/levandong.dev/blob/main/content"
     Text: "Suggest Changes" # edit text

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Các cách bật cài đặt cho Firefox"
 date: "2024-08-17 00:00:00"
+description: "Hai cách chỉnh Firefox: about:config hoặc file user.js để backup dễ."
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
 ---

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Triển khai blockchain cơ bản from scratch"
 date: "2025-07-06"
+description: "Xây blockchain cơ bản from scratch: block, hash, proof of work."
 tags: ["Blockchain", "Cryptocurrency"]
 categories: ["Blockchain"]
 ---

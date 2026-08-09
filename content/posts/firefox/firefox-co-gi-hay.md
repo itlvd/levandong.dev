@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Firefox có gì hay?"
 date: "2024-08-04 02:19:32"
+description: "Firefox miễn phí nhưng không bán privacy của bạn - container, privacy và nhiều tính năng hay."
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
 ---

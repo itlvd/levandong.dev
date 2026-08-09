@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Lazy giúp khởi tạo trong multithread"
 date: "2024-08-11"
+description: "Trì hoãn khởi tạo object với Lazy<T>, an toàn trong môi trường đa luồng."
 tags: ["CSharp", "Tips"]
 categories: ["Programming"]
 ---

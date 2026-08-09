@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Cách cài đặt Cloudflare Tunnel để kết nối SSH"
 date: "2025-06-28"
+description: "SSH về homelab qua Cloudflare Tunnel, không cần mở port công khai."
 tags: ["Linux", "Cloudflare"]
 categories: ["Tips"]
 ---

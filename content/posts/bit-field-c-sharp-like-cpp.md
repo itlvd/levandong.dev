@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Lưu trữ dữ liệu tốn ít tài nguyên hơn dựa vào bit trong CSharp"
 date: "2024-08-06"
+description: "Nén struct C# bằng bit để lưu trữ tốn ít dung lượng hơn."
 tags: ["CSharp", "Tips"]
 categories: ["Programming"]
 ---

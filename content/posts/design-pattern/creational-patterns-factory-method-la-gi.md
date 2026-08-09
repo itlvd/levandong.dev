@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Factory Method là gì"
 date: "2024-11-08"
+description: "Để class con quyết định object nào được tạo, thay vì hard-code new."
 tags: ["CSharp", "Creational Pattern"]
 categories: ["Programming"]
 ---

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Bit Fields in C++ devide many variable with one byte"
 date: "2021-04-12 17:00:00"
+description: "Pack many flag variables into a single byte with C/C++ Bit Fields."
 tags: ["C/C++", "Tips"]
 categories: ["Programming"]
 ---

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Tối ưu hiệu suất .NET Core In-Process và Out-of-Process"
 date: "2024-11-10"
+description: "In-Process hay Out-of-Process - hosting model ảnh hưởng trực tiếp đến hiệu suất .NET."
 tags: ["CSharp", "Tips"]
 categories: ["Programming"]
 ---

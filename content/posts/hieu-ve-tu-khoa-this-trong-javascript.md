@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Hiểu về từ khoá this trong Javascript"
 date: "2024-04-29 03:34:55"
+description: "this trong JavaScript thay đổi theo cách hàm được gọi, không theo nơi khai báo."
 tags: ["Javascript", "Tips"]
 categories: ["Programming", "Tips"]
 ---

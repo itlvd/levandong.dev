@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Cách sao lưu và khôi phục Firefox toàn vẹn"
 date: "2024-08-11"
+description: "Sao lưu thư mục Profile để mang Firefox đi bất kỳ đâu mà không mất dữ liệu."
 tags: ["Firefox", "Privacy"]
 categories: ["Tips"]
 ---

@@ -2,6 +2,7 @@
 author: "Le Van Dong"
 title: "Builder Pattern là gì"
 date: "2024-11-09"
+description: "Tạo object phức tạp theo từng bước, không nhồi hết vào constructor."
 tags: ["CSharp", "Creational Pattern"]
 categories: ["Programming"]
 ---

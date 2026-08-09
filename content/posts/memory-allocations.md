@@ -2,12 +2,9 @@
 author: "Le Van Dong"
 title: "Go Memory Allocation là gì? Cách Go quản lý bộ nhớ và tối ưu RAM"
 date: "2026-03-22"
-description: "Khám phá cách Go quản lý bộ nhớ và các kỹ thuật tối ưu hóa giúp tiết kiệm RAM, tăng hiệu năng."
+description: "Go quản lý stack/heap thế nào, và cách tối ưu để giảm GC, tiết kiệm RAM."
 tags: ["Go"]
 categories: ["Golang", "Programming"]
-cover:
-  image: /posts/images/memory_allocations.webp
-  alt: "Go Memory Allocation là gì? Cách Go quản lý bộ nhớ và tối ưu RAM"
 ---
 
 Khám phá cách Go quản lý bộ nhớ và các kỹ thuật tối ưu hóa giúp tiết kiệm RAM, tăng hiệu năng.
